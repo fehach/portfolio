@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="600" viewBox="0 0 1024 600">
+  <defs>
+    <linearGradient id="bg3" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#f8fafc"/>
+      <stop offset="100%" style="stop-color:#f1f5f9"/>
+    </linearGradient>
+    <linearGradient id="header3" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#0369a1"/>
+      <stop offset="100%" style="stop-color:#0284c7"/>
+    </linearGradient>
+  </defs>
+  <rect width="1024" height="600" fill="url(#bg3)"/>
+  <!-- Sidebar -->
+  <rect x="0" y="0" width="160" height="600" fill="#0c4a6e"/>
+  <text x="20" y="30" font-family="sans-serif" font-size="12" font-weight="bold" fill="white">Cisco WSA</text>
+  <text x="20" y="48" font-family="sans-serif" font-size="9" fill="#7dd3fc">Policy Dashboard</text>
+  <!-- Sidebar items -->
+  <rect x="0" y="65" width="160" height="30" fill="#0369a1" opacity="0.5"/>
+  <text x="30" y="84" font-family="sans-serif" font-size="10" fill="white">Dashboard</text>
+  <text x="30" y="114" font-family="sans-serif" font-size="10" fill="#bae6fd">Access Policies</text>
+  <text x="30" y="139" font-family="sans-serif" font-size="10" fill="#bae6fd">Identification Profiles</text>
+  <text x="30" y="164" font-family="sans-serif" font-size="10" fill="#bae6fd">HTTPS Policies</text>
+  <text x="30" y="189" font-family="sans-serif" font-size="10" fill="#bae6fd">Custom Categories</text>
+  <text x="30" y="214" font-family="sans-serif" font-size="10" fill="#bae6fd">Routing</text>
+  <text x="30" y="239" font-family="sans-serif" font-size="10" fill="#bae6fd">System Info</text>
+  <!-- Main content area -->
+  <rect x="160" y="0" width="864" height="600" fill="url(#bg3)"/>
+  <!-- Title -->
+  <text x="190" y="40" font-family="sans-serif" font-size="22" font-weight="bold" fill="#0f172a">WSA Policy Dashboard</text>
+  <text x="190" y="60" font-family="sans-serif" font-size="11" fill="#64748b">Configuration overview for nyvpwsav04.1199nbf.net</text>
+  <!-- Info bar -->
+  <rect x="190" y="80" width="810" height="50" rx="8" fill="url(#header3)"/>
+  <text x="210" y="99" font-family="sans-serif" font-size="9" fill="#bae6fd">Hostname</text>
+  <text x="210" y="118" font-family="sans-serif" font-size="12" font-weight="bold" fill="white">nyvpwsav04.1199nbf.net</text>
+  <text x="420" y="99" font-family="sans-serif" font-size="9" fill="#bae6fd">Model / Serial</text>
+  <text x="420" y="118" font-family="sans-serif" font-size="12" font-weight="bold" fill="white">S300V / 420366E851AC</text>
+  <text x="620" y="99" font-family="sans-serif" font-size="9" fill="#bae6fd">Version</text>
+  <text x="620" y="118" font-family="sans-serif" font-size="12" font-weight="bold" fill="white">coeus 12.0.1-334</text>
+  <text x="800" y="99" font-family="sans-serif" font-size="9" fill="#bae6fd">Management IP</text>
+  <text x="800" y="118" font-family="sans-serif" font-size="12" font-weight="bold" fill="white">10.98.28.2</text>
+  <!-- Stat cards -->
+  <rect x="190" y="150" width="190" height="80" rx="8" fill="white" stroke="#e2e8f0" stroke-width="1"/>
+  <text x="210" y="175" font-family="sans-serif" font-size="10" fill="#64748b">Access Policies</text>
+  <text x="210" y="205" font-family="sans-serif" font-size="28" font-weight="bold" fill="#0f172a">10</text>
+  <text x="210" y="220" font-family="sans-serif" font-size="9" fill="#22c55e">✓ 9 enabled</text>
+  <rect x="395" y="150" width="190" height="80" rx="8" fill="white" stroke="#e2e8f0" stroke-width="1"/>
+  <text x="415" y="175" font-family="sans-serif" font-size="10" fill="#64748b">Identification Profiles</text>
+  <text x="415" y="205" font-family="sans-serif" font-size="28" font-weight="bold" fill="#0f172a">13</text>
+  <text x="415" y="220" font-family="sans-serif" font-size="9" fill="#64748b">User groups defined</text>
+  <rect x="600" y="150" width="190" height="80" rx="8" fill="white" stroke="#e2e8f0" stroke-width="1"/>
+  <text x="620" y="175" font-family="sans-serif" font-size="10" fill="#64748b">Custom Categories</text>
+  <text x="620" y="205" font-family="sans-serif" font-size="28" font-weight="bold" fill="#0f172a">7</text>
+  <text x="620" y="220" font-family="sans-serif" font-size="9" fill="#ef4444">⊘ 225+ blocked sites</text>
+  <rect x="805" y="150" width="190" height="80" rx="8" fill="white" stroke="#e2e8f0" stroke-width="1"/>
+  <text x="825" y="175" font-family="sans-serif" font-size="10" fill="#64748b">Static Routes</text>
+  <text x="825" y="205" font-family="sans-serif" font-size="28" font-weight="bold" fill="#0f172a">0</text>
+  <text x="825" y="220" font-family="sans-serif" font-size="9" fill="#64748b">Network routes</text>
+  <!-- ISE Integration -->
+  <rect x="190" y="250" width="400" height="120" rx="8" fill="white" stroke="#e2e8f0" stroke-width="1"/>
+  <text x="220" y="280" font-family="sans-serif" font-size="14" font-weight="bold" fill="#0f172a">ISE Integration</text>
+  <text x="220" y="310" font-family="sans-serif" font-size="11" fill="#64748b">pxGrid Status</text>
+  <rect x="470" y="296" width="65" height="22" rx="4" fill="#fef2f2"/>
+  <text x="480" y="312" font-family="sans-serif" font-size="10" fill="#ef4444">Disabled</text>
+  <text x="220" y="345" font-family="sans-serif" font-size="11" fill="#64748b">ERS API</text>
+  <rect x="470" y="331" width="65" height="22" rx="4" fill="#f8fafc"/>
+  <text x="480" y="347" font-family="sans-serif" font-size="10" fill="#64748b">Disabled</text>
+  <!-- Security Features -->
+  <rect x="605" y="250" width="390" height="120" rx="8" fill="white" stroke="#e2e8f0" stroke-width="1"/>
+  <text x="630" y="280" font-family="sans-serif" font-size="14" font-weight="bold" fill="#0f172a">Security Features</text>
+  <circle cx="640" cy="305" r="4" fill="#22c55e"/>
+  <text x="650" y="309" font-family="sans-serif" font-size="9" fill="#64748b">L4 Traffic Monitor</text>
+  <circle cx="790" cy="305" r="4" fill="#22c55e"/>
+  <text x="800" y="309" font-family="sans-serif" font-size="9" fill="#64748b">HTTPS</text>
+  <circle cx="640" cy="325" r="4" fill="#22c55e"/>
+  <text x="650" y="329" font-family="sans-serif" font-size="9" fill="#64748b">File Reputation</text>
+  <circle cx="790" cy="325" r="4" fill="#22c55e"/>
+  <text x="800" y="329" font-family="sans-serif" font-size="9" fill="#64748b">CIWUC</text>
+  <circle cx="640" cy="345" r="4" fill="#22c55e"/>
+  <text x="650" y="349" font-family="sans-serif" font-size="9" fill="#64748b">Sophos</text>
+  <circle cx="790" cy="345" r="4" fill="#22c55e"/>
+  <text x="800" y="349" font-family="sans-serif" font-size="9" fill="#64748b">File Analysis</text>
+</svg>

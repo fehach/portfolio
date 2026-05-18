@@ -1,0 +1,92 @@
+import {
+  Bot,
+  AlertCircle,
+  Globe,
+  Bug,
+} from "lucide-react";
+import { FeaturedProjectCard, ProjectCard } from "./ProjectCard";
+import type { Project } from "./ProjectCard";
+import FadeIn from "./FadeIn";
+
+const featuredProject: Project = {
+  title: "CSW OpenAPI Agent",
+  slug: "openapi-agent",
+  description:
+    "AI-powered interactive agent that uses Claude AI to interpret natural language questions, generate live API calls to Cisco Secure Workload, and present results in real-time.",
+  longDescription:
+    "Features natural language Q&A about your CSW deployment, live API calls with sandbox validation, pre-built queries for common operations, safe mode that shows API calls before executing, and CSV export. Built with Python, Claude AI via ClaudeGate, and the Tetration REST API.",
+  tags: ["Python", "Claude AI", "REST API", "Cisco CSW", "NLP", "Automation"],
+  icon: Bot,
+  screenshot: "/screenshots/openapi-agent.svg",
+  featured: true,
+};
+
+const otherProjects: Project[] = [
+  {
+    title: "CSW Red Button",
+    slug: "red-button",
+    description:
+      "Emergency evidence collection tool for Cisco Secure Workload. One-click pre-uninstall data gathering: agent metadata, workspace policies, and denied flows bundled as downloadable evidence packages.",
+    tags: ["Python", "Flask", "Cisco CSW", "Forensics"],
+    icon: AlertCircle,
+    screenshot: "/screenshots/red-button.svg",
+  },
+  {
+    title: "WSA Policy Review Dashboard",
+    slug: "wsa-dashboard",
+    description:
+      "Interactive dashboard for reviewing Cisco Web Security Appliance configurations. Displays access policies, identification profiles, HTTPS policies, custom categories, routing, and security features at a glance.",
+    tags: ["Python", "Dashboard", "Cisco WSA", "XML Parsing"],
+    icon: Globe,
+    screenshot: "/screenshots/wsa-dashboard.svg",
+  },
+  {
+    title: "CSW Vulnerability Reports",
+    slug: "vulnerability-reports",
+    description:
+      "Automated vulnerability analysis by label with detailed reporting. Processes CVE data across workloads and generates actionable security intelligence.",
+    tags: ["Python", "CVE", "Security", "Reporting"],
+    icon: Bug,
+  },
+];
+
+export default function Projects() {
+  return (
+    <section id="projects" className="py-24 px-4 relative">
+      <div className="max-w-6xl mx-auto">
+        <FadeIn>
+        <div className="flex items-center gap-3 mb-4">
+          <div className="h-px flex-1 max-w-12 bg-neon-blue/40" />
+          <span className="text-xs font-mono text-neon-blue tracking-widest uppercase">
+            Portfolio
+          </span>
+          <div className="h-px flex-1 max-w-12 bg-neon-blue/40" />
+        </div>
+
+        <h2 className="text-3xl sm:text-4xl font-bold mb-4 text-center">
+          What I&apos;ve <span className="text-neon-blue">Built</span>
+        </h2>
+
+        <p className="text-gray-400 text-center max-w-2xl mx-auto mb-12">
+          Tools and solutions built with Windsurf IDE, combining cybersecurity
+          expertise with AI-powered development to solve real enterprise challenges.
+        </p>
+        </FadeIn>
+
+        <FadeIn delay={0.1}>
+        <div className="mb-12">
+          <FeaturedProjectCard project={featuredProject} />
+        </div>
+        </FadeIn>
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          {otherProjects.map((project, i) => (
+            <FadeIn key={project.slug} delay={0.05 * i}>
+              <ProjectCard project={project} />
+            </FadeIn>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}

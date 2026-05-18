@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="400" viewBox="0 0 1024 400">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0f1923"/>
+      <stop offset="100%" style="stop-color:#1a2332"/>
+    </linearGradient>
+  </defs>
+  <rect width="1024" height="400" fill="url(#bg)"/>
+  <!-- Sidebar -->
+  <rect x="0" y="0" width="140" height="400" fill="#0d1520" stroke="#1e293b" stroke-width="1"/>
+  <rect x="10" y="10" width="120" height="30" rx="4" fill="#00ff88" opacity="0.15"/>
+  <text x="30" y="30" font-family="monospace" font-size="11" fill="#00ff88">CSW Agent</text>
+  <rect x="10" y="55" width="120" height="28" rx="4" fill="#00d4ff" opacity="0.1"/>
+  <text x="30" y="73" font-family="monospace" font-size="10" fill="#00d4ff">Inicio</text>
+  <text x="30" y="103" font-family="monospace" font-size="10" fill="#6b7280">Consultas</text>
+  <text x="30" y="128" font-family="monospace" font-size="10" fill="#6b7280">Chat con Claude</text>
+  <text x="30" y="153" font-family="monospace" font-size="10" fill="#6b7280">Configuración</text>
+  <!-- Header bar -->
+  <rect x="140" y="0" width="884" height="40" fill="#111827" stroke="#1e293b" stroke-width="1"/>
+  <text x="160" y="25" font-family="monospace" font-size="12" fill="#e0e6ed">CSW Agent</text>
+  <circle cx="920" cy="20" r="5" fill="#00ff88"/>
+  <text x="935" y="24" font-family="monospace" font-size="9" fill="#00ff88">CSW conectado</text>
+  <!-- Welcome card -->
+  <rect x="170" y="60" width="650" height="80" rx="8" fill="#111827" stroke="#1e293b" stroke-width="1"/>
+  <text x="195" y="90" font-family="sans-serif" font-size="16" font-weight="bold" fill="#e0e6ed">Bienvenido al panel del CSW Agent</text>
+  <text x="195" y="115" font-family="sans-serif" font-size="11" fill="#6b7280">Ejecuta consultas locales sobre tu despliegue de Cisco Secure Workload</text>
+  <!-- Three cards -->
+  <rect x="170" y="160" width="210" height="110" rx="8" fill="#111827" stroke="#1e293b" stroke-width="1"/>
+  <circle cx="195" cy="185" r="10" fill="#00d4ff" opacity="0.2"/>
+  <text x="215" y="190" font-family="sans-serif" font-size="12" font-weight="bold" fill="#e0e6ed">Ejecutar consultas</text>
+  <text x="185" y="215" font-family="sans-serif" font-size="9" fill="#6b7280">Catálogo de informes locales</text>
+  <text x="185" y="250" font-family="monospace" font-size="9" fill="#00d4ff">Abrir consultas ></text>
+  <rect x="400" y="160" width="210" height="110" rx="8" fill="#111827" stroke="#1e293b" stroke-width="1"/>
+  <circle cx="425" cy="185" r="10" fill="#f59e0b" opacity="0.2"/>
+  <text x="445" y="190" font-family="sans-serif" font-size="12" font-weight="bold" fill="#e0e6ed">Preguntar a Claude</text>
+  <text x="415" y="215" font-family="sans-serif" font-size="9" fill="#6b7280">Conversa en lenguaje natural</text>
+  <text x="415" y="250" font-family="monospace" font-size="9" fill="#f59e0b">Abrir chat ></text>
+  <rect x="630" y="160" width="210" height="110" rx="8" fill="#111827" stroke="#1e293b" stroke-width="1"/>
+  <circle cx="655" cy="185" r="10" fill="#a855f7" opacity="0.2"/>
+  <text x="675" y="190" font-family="sans-serif" font-size="12" font-weight="bold" fill="#e0e6ed">Configuración</text>
+  <text x="645" y="215" font-family="sans-serif" font-size="9" fill="#6b7280">Estado de la conexión, modelo</text>
+  <text x="645" y="250" font-family="monospace" font-size="9" fill="#a855f7">Ver configuración ></text>
+  <!-- How it works -->
+  <rect x="170" y="290" width="670" height="90" rx="8" fill="#111827" stroke="#1e293b" stroke-width="1"/>
+  <text x="195" y="315" font-family="sans-serif" font-size="13" font-weight="bold" fill="#e0e6ed">Cómo funciona</text>
+  <text x="195" y="340" font-family="sans-serif" font-size="10" fill="#6b7280">Consultas: ejecuta informes pre-construidos (no requieren conocer la API).</text>
+  <text x="195" y="358" font-family="sans-serif" font-size="10" fill="#00d4ff">Chat con Claude: describe lo que quieres en español o inglés.</text>
+</svg>
