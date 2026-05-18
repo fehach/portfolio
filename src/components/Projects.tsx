@@ -17,7 +17,7 @@ const featuredProject: Project = {
     "Features natural language Q&A about your CSW deployment, live API calls with sandbox validation, pre-built queries for common operations, safe mode that shows API calls before executing, and CSV export. Built with Python, Claude AI via ClaudeGate, and the Tetration REST API.",
   tags: ["Python", "Claude AI", "REST API", "Cisco CSW", "NLP", "Automation"],
   icon: Bot,
-  screenshot: "/screenshots/openapi-agent.svg",
+  screenshot: "/screenshots/openapi-agent.png",
   featured: true,
 };
 
@@ -29,7 +29,7 @@ const otherProjects: Project[] = [
       "Emergency evidence collection tool for Cisco Secure Workload. One-click pre-uninstall data gathering: agent metadata, workspace policies, and denied flows bundled as downloadable evidence packages.",
     tags: ["Python", "Flask", "Cisco CSW", "Forensics"],
     icon: AlertCircle,
-    screenshot: "/screenshots/red-button.svg",
+    screenshot: "/screenshots/red-button.png",
   },
   {
     title: "WSA Policy Review Dashboard",
@@ -38,7 +38,7 @@ const otherProjects: Project[] = [
       "Interactive dashboard for reviewing Cisco Web Security Appliance configurations. Displays access policies, identification profiles, HTTPS policies, custom categories, routing, and security features at a glance.",
     tags: ["Python", "Dashboard", "Cisco WSA", "XML Parsing"],
     icon: Globe,
-    screenshot: "/screenshots/wsa-dashboard.svg",
+    screenshot: "/screenshots/wsa-dashboard.png",
   },
   {
     title: "CSW Vulnerability Reports",
