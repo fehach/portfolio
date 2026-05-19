@@ -8,6 +8,7 @@ import {
   Briefcase,
   Building2,
   ChevronRight,
+  Landmark,
 } from "lucide-react";
 import FadeIn from "./FadeIn";
 
@@ -31,6 +32,11 @@ const skills = [
     icon: Code2,
     title: "Python & DevSecOps",
     description: "Developing dashboards, API integrations, MCP servers, and automated reporting tools.",
+  },
+  {
+    icon: Landmark,
+    title: "PCI Compliance",
+    description: "Helped banking customers achieve PCI compliance using Cisco Secure Workload and Secure Network Analytics for microsegmentation and traffic visibility.",
   },
 ];
 
@@ -158,7 +164,7 @@ export default function About() {
         </div>
         </FadeIn>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6">
           {skills.map((skill, i) => (
             <FadeIn key={skill.title} delay={0.1 * i}>
             <div
