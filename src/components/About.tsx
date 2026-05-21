@@ -50,7 +50,7 @@ const recognitions = [
   },
   {
     quote: "Thanks for all your efforts to drive AI adoption in Security by ideating new and innovative use cases, thoroughly testing, and presenting on the AI Security sessions. We could not have come this far in our AI adoption journey without your individual support and dedication!",
-    attribution: "Cisco Security Consulting Team",
+    attribution: "Cisco CX Leadership",
   },
 ];
 
