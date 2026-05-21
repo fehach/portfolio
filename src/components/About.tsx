@@ -182,12 +182,14 @@ export default function About() {
             for automated threat response and containment actions in real time.
           </p>
           <p className="text-gray-400 leading-relaxed text-center text-base sm:text-lg">
-            I&apos;m a security architect who also writes code. My{" "}
+            I&apos;m a security architect who also likes vibe coding and writes
+            code. My{" "}
             <span className="text-neon-purple font-semibold">
               Python and AI automations
             </span>{" "}
-            have cut manual SOC query time from hours to seconds across multiple
-            customer environments. I think in systems &mdash; architecture, policy,
+            have cut manual configuration during maintenance windows and
+            operations from hours to minutes across multiple customer
+            environments. I think in systems &mdash; architecture, policy,
             workflow &mdash; but I stay close to the implementation because
             that&apos;s where security programs actually succeed or fail.
           </p>
