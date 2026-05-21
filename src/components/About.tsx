@@ -10,6 +10,8 @@ import {
   ChevronRight,
   Landmark,
   Quote,
+  Languages,
+  Flag,
 } from "lucide-react";
 import FadeIn from "./FadeIn";
 
@@ -234,6 +236,30 @@ export default function About() {
                 {cert}
               </span>
             ))}
+          </div>
+        </div>
+        </FadeIn>
+
+        {/* Languages */}
+        <FadeIn delay={0.1}>
+        <div className="mt-16">
+          <div className="flex items-center gap-3 mb-6">
+            <Languages className="w-5 h-5 text-neon-green" />
+            <h3 className="text-xl font-bold text-foreground">Languages & Citizenship</h3>
+          </div>
+          <div className="flex flex-wrap gap-4">
+            <div className="px-5 py-3 rounded-lg bg-card-bg border border-neon-green/20 hover:border-neon-green/50 hover:shadow-[0_0_12px_rgba(0,255,136,0.15)] transition-all duration-300">
+              <span className="text-sm font-mono text-neon-green">English</span>
+              <span className="text-xs text-gray-500 ml-2">B2 High-Mid &middot; EF SET</span>
+            </div>
+            <div className="px-5 py-3 rounded-lg bg-card-bg border border-neon-green/20 hover:border-neon-green/50 hover:shadow-[0_0_12px_rgba(0,255,136,0.15)] transition-all duration-300">
+              <span className="text-sm font-mono text-neon-green">Spanish</span>
+              <span className="text-xs text-gray-500 ml-2">Native</span>
+            </div>
+            <div className="px-5 py-3 rounded-lg bg-card-bg border border-neon-purple/20 hover:border-neon-purple/50 hover:shadow-[0_0_12px_rgba(168,85,247,0.15)] transition-all duration-300 flex items-center gap-2">
+              <Flag className="w-4 h-4 text-neon-purple" />
+              <span className="text-sm font-mono text-neon-purple">German Citizenship</span>
+            </div>
           </div>
         </div>
         </FadeIn>
