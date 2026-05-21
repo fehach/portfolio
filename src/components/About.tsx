@@ -163,8 +163,12 @@ export default function About() {
             When LATAM banks needed to reach{" "}
             <span className="text-neon-green font-semibold">PCI-DSS compliance</span>{" "}
             without disrupting live payment infrastructure, I designed and delivered
-            full microsegmentation architectures using Cisco Secure Workload. That
-            kind of engagement &mdash; high-stakes, technically complex,
+            full microsegmentation architectures using Cisco Secure Workload
+            &mdash; leveraging the integration with{" "}
+            <span className="text-neon-blue font-semibold">Cisco FMC</span>{" "}
+            so firewall policies are updated dynamically, enabling agentless
+            segmentation and traffic control across different zones within the
+            Data Center. That kind of engagement &mdash; high-stakes, technically complex,
             timeline-constrained &mdash; is what I&apos;ve been doing across{" "}
             <span className="text-neon-blue font-semibold">
               60+ enterprise customers in 6 countries
