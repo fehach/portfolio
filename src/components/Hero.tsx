@@ -10,6 +10,13 @@ const titles = [
   "Microsegmentation Expert",
 ];
 
+const impactStats = [
+  { value: "60+", label: "Enterprise Deployments", color: "text-neon-blue" },
+  { value: "6", label: "Countries across the Americas", color: "text-neon-green" },
+  { value: "16", label: "Years in Cybersecurity", color: "text-neon-purple" },
+  { value: "2\u00D7", label: "CCIE \u00B7 Security + R&S", color: "text-white" },
+];
+
 export default function Hero() {
   const [titleIndex, setTitleIndex] = useState(0);
   const [displayed, setDisplayed] = useState("");
@@ -50,7 +57,7 @@ export default function Hero() {
         <div className="inline-flex items-center gap-2 px-4 py-2 mb-8 rounded-full border border-neon-green/20 bg-neon-green/5">
           <Shield className="w-4 h-4 text-neon-green" />
           <span className="text-xs font-mono text-neon-green tracking-wider uppercase">
-            16+ Years in Cybersecurity
+            CCIE Security #57675 &middot; CISSP &middot; MBA
           </span>
         </div>
 
@@ -67,10 +74,29 @@ export default function Hero() {
           </div>
         </div>
 
-        <p className="text-gray-400 max-w-2xl mx-auto text-base sm:text-lg leading-relaxed mb-12">
-          Designing and delivering enterprise security, network visibility,
-          microsegmentation, and AI-driven automation solutions across the Americas.
+        <p className="text-gray-400 max-w-2xl mx-auto text-base sm:text-lg leading-relaxed mb-10">
+          Cybersecurity architect and automation builder. I design Zero Trust
+          programs that actually get deployed &mdash; 60+ enterprise customers
+          across banking, telecom, and government in Latin America. Dual CCIE.
+          CISSP. MBA. Available for senior architect roles and consulting
+          engagements.
         </p>
+
+        <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 max-w-2xl mx-auto mb-12">
+          {impactStats.map((stat) => (
+            <div
+              key={stat.label}
+              className="p-4 rounded-lg bg-card-bg/60 border border-card-border backdrop-blur-sm"
+            >
+              <div className={`text-2xl sm:text-3xl font-bold ${stat.color}`}>
+                {stat.value}
+              </div>
+              <div className="text-xs text-gray-500 mt-1 font-mono leading-tight">
+                {stat.label}
+              </div>
+            </div>
+          ))}
+        </div>
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <a

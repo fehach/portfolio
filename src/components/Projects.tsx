@@ -12,9 +12,9 @@ const featuredProject: Project = {
   title: "CSW OpenAPI Agent",
   slug: "openapi-agent",
   description:
-    "AI-powered interactive agent that uses Claude AI to interpret natural language questions, generate live API calls to Cisco Secure Workload, and present results in real-time.",
+    "Cut analyst time on Cisco Secure Workload security queries from hours to under 5 minutes per investigation. AI-powered agent that interprets natural language questions, generates live API calls, and presents results in real-time.",
   longDescription:
-    "Features natural language Q&A about your CSW deployment, live API calls with sandbox validation, pre-built queries for common operations, safe mode that shows API calls before executing, and CSV export. Built with Python, Claude AI via ClaudeGate, and the Tetration REST API.",
+    "Built to eliminate the manual CLI-diving that burns SOC analyst hours on recurring threat lookups. Features natural language Q&A about your CSW deployment, live API calls with sandbox validation, pre-built queries for common operations, safe mode that shows API calls before executing, and CSV export. Built with Python, Claude AI, and the Tetration REST API.",
   tags: ["Python", "Claude AI", "REST API", "Cisco CSW", "NLP", "Automation"],
   icon: Bot,
   screenshot: "/screenshots/openapi-agent.png",
@@ -26,7 +26,7 @@ const otherProjects: Project[] = [
     title: "CSW Red Button",
     slug: "red-button",
     description:
-      "Emergency evidence collection tool for Cisco Secure Workload. One-click pre-uninstall data gathering: agent metadata, workspace policies, and denied flows bundled as downloadable evidence packages.",
+      "One-click forensic data collection during active security incidents \u2014 replacing a multi-step manual process that previously required Cisco TAC escalation. Gives IR teams same-day packet and flow context without waiting on ticket queues.",
     tags: ["Python", "Flask", "Cisco CSW", "Forensics"],
     icon: AlertCircle,
     screenshot: "/screenshots/red-button.png",
@@ -35,7 +35,7 @@ const otherProjects: Project[] = [
     title: "WSA Policy Review Dashboard",
     slug: "wsa-dashboard",
     description:
-      "Interactive dashboard for reviewing Cisco Web Security Appliance configurations. Displays access policies, identification profiles, HTTPS policies, custom categories, routing, and security features at a glance.",
+      "Automated review of Cisco WSA policy configurations \u2014 surfacing compliance gaps and misconfigured rules that manual review routinely misses. Displays access policies, identification profiles, HTTPS policies, custom categories, routing, and security features at a glance.",
     tags: ["Python", "Dashboard", "Cisco WSA", "XML Parsing"],
     icon: Globe,
     screenshot: "/screenshots/wsa-dashboard.png",
@@ -44,7 +44,7 @@ const otherProjects: Project[] = [
     title: "CSW Vulnerability Reports",
     slug: "vulnerability-reports",
     description:
-      "Automated vulnerability analysis by label with detailed reporting. Processes CVE data across workloads and generates actionable security intelligence.",
+      "Automated vulnerability analysis that processes CVE data across workloads and generates actionable security intelligence \u2014 replacing hours of manual report compilation with on-demand reporting by label.",
     tags: ["Python", "CVE", "Security", "Reporting"],
     icon: Bug,
   },

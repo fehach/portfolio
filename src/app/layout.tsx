@@ -13,23 +13,30 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Federico Hach | Security Architect & Zero Trust Portfolio",
+  title: "Federico Hach \u2014 Zero Trust & Cybersecurity Architect | CCIE Security #57675",
   description:
-    "Portfolio of Federico Miguel Hach Saval — Cybersecurity and Zero Trust Architect with 16+ years of experience. AI-driven automation, microsegmentation, and Cisco Security solutions.",
+    "Senior cybersecurity architect with 60+ enterprise deployments across LATAM. Zero Trust, PCI-DSS, AI-driven security automation. CCIE Security #57675 \u00B7 CISSP \u00B7 MBA.",
   keywords: [
     "Security Architect",
     "Zero Trust",
     "Cisco Secure Workload",
     "Microsegmentation",
+    "PCI-DSS",
+    "CCIE Security",
+    "CISSP",
     "Python",
     "AI Automation",
     "Cybersecurity",
+    "LATAM",
   ],
   openGraph: {
-    title: "Federico Hach | Security Architect",
+    title: "Federico Hach \u2014 Cybersecurity Architect",
     description:
-      "Cybersecurity and Zero Trust Architect — AI-driven automation & enterprise security solutions.",
+      "60+ enterprise Zero Trust and PCI-DSS deployments across LATAM. Available for senior architect roles and consulting engagements.",
     type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
   },
 };
 

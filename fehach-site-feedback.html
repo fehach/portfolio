@@ -1,0 +1,694 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>fehach.bio — Feedback & Ideas from a Friend</title>
+<meta name="description" content="Some ideas from Luis on Federico Hach's personal site — section-by-section suggestions, draft copy to use or ignore, and a loose next-steps list.">
+<style>
+:root {
+  --cisco-blue: #3070E7;
+  --cisco-dark-blue: #0F1729;
+  --cisco-navy: #07182D;
+  --cisco-teal: #16BDEB;
+  --cisco-cyber: #00C8FF;
+  --cisco-green: #22C55E;
+  --cisco-yellow: #F59E0B;
+  --cisco-orange: #FF9000;
+  --cisco-red: #EF4444;
+  --cisco-gray: #64748B;
+  --cisco-secondary: #94A3B8;
+  --nav-width: 280px;
+  --bg: #060E1A;
+  --surface: #0D1B2E;
+  --surface2: #122035;
+  --border: #1E3350;
+  --text: #E2E8F0;
+  --text-dim: #94A3B8;
+  --radius: 10px;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif;font-size:15px;line-height:1.65;min-height:100vh}
+a{color:var(--cisco-teal);text-decoration:none}
+a:hover{color:var(--cisco-cyber);text-decoration:underline}
+h1{font-size:1.9rem;font-weight:300;color:#fff;margin-bottom:.5rem}
+h2{font-size:1.4rem;font-weight:500;color:#fff;margin-bottom:.75rem;padding-bottom:.4rem;border-bottom:1px solid var(--border)}
+h3{font-size:1.1rem;font-weight:600;color:var(--cisco-teal);margin-bottom:.5rem}
+h4{font-size:.95rem;font-weight:600;color:var(--cisco-secondary);text-transform:uppercase;letter-spacing:.06em;margin-bottom:.4rem}
+p{margin-bottom:.85rem}
+ul,ol{margin-left:1.4rem;margin-bottom:.85rem}
+li{margin-bottom:.3rem}
+strong{color:#fff;font-weight:600}
+code{background:#1a2d47;color:var(--cisco-cyber);padding:.1rem .35rem;border-radius:4px;font-size:.85em}
+
+/* ── NAV ── */
+.nav{position:fixed;top:0;left:0;width:var(--nav-width);height:100vh;background:linear-gradient(180deg,#0A1525 0%,#060E1A 100%);border-right:1px solid var(--border);overflow-y:auto;z-index:100;padding-bottom:2rem}
+.nav-brand{padding:1.25rem 1.25rem .75rem;border-bottom:1px solid var(--border)}
+.nav-brand .title{font-size:.95rem;font-weight:700;color:#fff;letter-spacing:.02em}
+.nav-brand .sub{font-size:.72rem;color:var(--cisco-secondary);margin-top:.2rem}
+.nav-brand .badge{display:inline-block;background:var(--cisco-blue);color:#fff;font-size:.65rem;font-weight:700;padding:.15rem .5rem;border-radius:20px;margin-top:.4rem;text-transform:uppercase;letter-spacing:.05em}
+.nav-section{padding:.6rem 1.25rem .2rem;font-size:.65rem;font-weight:700;color:var(--cisco-blue);text-transform:uppercase;letter-spacing:.1em;margin-top:.3rem}
+.nav a{display:block;padding:.42rem 1.25rem .42rem 1.5rem;font-size:.8rem;color:var(--text-dim);transition:all .15s;border-left:2px solid transparent;line-height:1.3}
+.nav a:hover{color:#fff;background:rgba(48,112,231,.08);border-left-color:var(--cisco-blue);text-decoration:none}
+.nav a.active{color:#fff;background:rgba(48,112,231,.14);border-left-color:var(--cisco-teal)}
+.nav a.sub{padding-left:2.1rem;font-size:.75rem}
+.nav-footer{padding:1rem 1.25rem 0;border-top:1px solid var(--border);margin-top:.5rem}
+.nav-footer p{font-size:.65rem;color:var(--cisco-gray);line-height:1.5;margin:0}
+
+/* ── MAIN ── */
+.main{margin-left:var(--nav-width)}
+.container{max-width:960px;margin:0 auto;padding:2.5rem 2rem 4rem}
+.report-header{background:linear-gradient(135deg,#0A1C35 0%,#071228 60%,#060E1A 100%);border-bottom:1px solid var(--border);padding:2.5rem 2rem 2rem;margin-left:var(--nav-width);position:relative;overflow:hidden}
+.report-header::before{content:'';position:absolute;top:-60px;right:-60px;width:280px;height:280px;background:radial-gradient(circle,rgba(48,112,231,.18) 0%,transparent 70%);pointer-events:none}
+.report-header .eyebrow{font-size:.72rem;font-weight:700;color:var(--cisco-teal);text-transform:uppercase;letter-spacing:.12em;margin-bottom:.5rem}
+.report-header h1{font-size:2rem;font-weight:300;margin-bottom:.5rem;line-height:1.2}
+.report-header h1 span{color:var(--cisco-teal)}
+.report-header .meta{font-size:.8rem;color:var(--text-dim)}
+.report-header .meta strong{color:#fff}
+.cisco-wordmark{position:absolute;right:2rem;top:50%;transform:translateY(-50%);opacity:.5}
+.cisco-wordmark svg{width:80px;height:auto}
+
+section{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);margin-bottom:1.75rem;padding:1.75rem 2rem;scroll-margin-top:1.5rem}
+section.flush{padding:0}
+.section-label{display:inline-block;font-size:.65rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;padding:.2rem .6rem;border-radius:4px;margin-bottom:.75rem}
+.section-label.diagnosis{background:rgba(245,158,11,.15);color:var(--cisco-yellow)}
+.section-label.problem{background:rgba(239,68,68,.15);color:var(--cisco-red)}
+.section-label.rewrite{background:rgba(48,112,231,.15);color:var(--cisco-teal)}
+.section-label.add{background:rgba(34,197,94,.15);color:var(--cisco-green)}
+.section-label.seo{background:rgba(139,92,246,.15);color:#a78bfa}
+.section-label.action{background:rgba(22,189,235,.15);color:var(--cisco-teal)}
+
+/* ── SCORE GRID ── */
+.score-grid{display:grid;grid-template-columns:1fr 1fr;gap:.75rem;margin-bottom:1.25rem}
+.score-card{background:var(--surface2);border:1px solid var(--border);border-radius:8px;padding:.9rem 1rem;display:flex;gap:.75rem;align-items:flex-start}
+.score-badge{min-width:36px;height:36px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:.95rem;font-weight:700;flex-shrink:0}
+.s1{background:rgba(239,68,68,.2);color:#f87171}
+.s2{background:rgba(239,68,68,.15);color:var(--cisco-orange)}
+.s3{background:rgba(245,158,11,.2);color:var(--cisco-yellow)}
+.s4{background:rgba(22,197,94,.15);color:#6ee7a0}
+.s5{background:rgba(34,197,94,.2);color:var(--cisco-green)}
+.score-card-text .label{font-size:.8rem;font-weight:600;color:#fff;margin-bottom:.2rem}
+.score-card-text .why{font-size:.75rem;color:var(--text-dim);line-height:1.45}
+.score-total{background:linear-gradient(135deg,rgba(48,112,231,.12),rgba(22,189,235,.06));border:1px solid rgba(48,112,231,.3);border-radius:8px;padding:1rem 1.25rem;text-align:center;margin-bottom:1rem}
+.score-total .big{font-size:2.5rem;font-weight:700;color:var(--cisco-blue);line-height:1}
+.score-total .label{font-size:.75rem;color:var(--text-dim);margin-top:.2rem}
+.verdict{background:var(--surface2);border-left:3px solid var(--cisco-yellow);padding:.85rem 1rem;border-radius:0 6px 6px 0;font-size:.88rem;font-style:italic;color:var(--text)}
+
+/* ── REWRITE BOXES ── */
+.current-box{background:#0B1520;border:1px solid #1E3350;border-radius:7px;padding:.9rem 1.1rem;margin-bottom:.65rem}
+.current-box .box-label{font-size:.65rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--cisco-gray);margin-bottom:.5rem}
+.current-box blockquote{font-size:.85rem;color:var(--text-dim);font-style:italic;border:none;padding:0;margin:0}
+.wrong-list{list-style:none;margin-left:0;margin-bottom:.65rem}
+.wrong-list li{font-size:.83rem;color:#fca5a5;padding:.25rem 0 .25rem 1.2rem;position:relative}
+.wrong-list li::before{content:'✗';position:absolute;left:0;color:var(--cisco-red);font-size:.75rem}
+.paste-box{background:rgba(48,112,231,.07);border:1.5px dashed var(--cisco-blue);border-radius:8px;padding:1rem 1.2rem;margin-bottom:.65rem;position:relative}
+.paste-box .box-label{font-size:.65rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--cisco-teal);margin-bottom:.5rem;display:flex;align-items:center;gap:.4rem}
+.paste-box .copy-text{font-size:.88rem;color:#fff;line-height:1.6}
+.paste-box .copy-text em{color:var(--cisco-yellow);font-style:normal}
+.why-box{font-size:.8rem;background:rgba(34,197,94,.07);border-left:2px solid var(--cisco-green);padding:.5rem .8rem;border-radius:0 5px 5px 0;color:var(--cisco-secondary);margin-bottom:.4rem}
+.why-box strong{color:var(--cisco-green)}
+.federico-marker{display:inline-block;background:rgba(245,158,11,.15);border:1px solid rgba(245,158,11,.3);color:var(--cisco-yellow);font-size:.72rem;font-weight:600;padding:.1rem .4rem;border-radius:4px;font-family:monospace}
+
+/* ── IMPACT STRIP ── */
+.impact-strip{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--border);border-radius:8px;overflow:hidden}
+.impact-cell{background:var(--surface2);padding:1.25rem 1rem;text-align:center}
+.impact-cell .big{font-size:2rem;font-weight:700;color:var(--cisco-cyber);line-height:1}
+.impact-cell .label{font-size:.72rem;color:var(--text-dim);margin-top:.3rem;text-transform:uppercase;letter-spacing:.05em}
+
+/* ── CASE STUDY CARDS ── */
+.case-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem}
+.case-card{background:var(--surface2);border:1px solid var(--border);border-radius:8px;padding:1.1rem;display:flex;flex-direction:column;gap:.5rem}
+.case-card .industry-tag{font-size:.65rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--cisco-teal);border:1px solid rgba(22,189,235,.3);display:inline-block;padding:.15rem .5rem;border-radius:4px}
+.case-card .challenge{font-size:.78rem;color:var(--text-dim)}
+.case-card .result{font-size:.82rem;color:var(--cisco-green);font-weight:600}
+.case-card h4{font-size:.85rem;color:#fff;text-transform:none;letter-spacing:0}
+
+/* ── TESTIMONIAL ── */
+.testi-grid{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+.testi-card{background:var(--surface2);border:1px solid var(--border);border-radius:8px;padding:1.1rem}
+.testi-card .quote{font-size:.88rem;font-style:italic;color:var(--text);border-left:2px solid var(--cisco-teal);padding-left:.75rem;margin-bottom:.65rem}
+.testi-card .attr{font-size:.75rem;color:var(--text-dim)}
+
+/* ── CHECKLIST ── */
+.checklist{list-style:none;margin-left:0}
+.checklist li{display:flex;gap:.6rem;padding:.5rem 0;border-bottom:1px solid var(--border);font-size:.87rem;align-items:flex-start}
+.checklist li:last-child{border-bottom:none}
+.check-box{width:18px;height:18px;border:1.5px solid var(--cisco-blue);border-radius:3px;flex-shrink:0;margin-top:.15rem}
+.day-tag{background:rgba(48,112,231,.15);color:var(--cisco-teal);font-size:.67rem;font-weight:700;padding:.1rem .4rem;border-radius:4px;white-space:nowrap;flex-shrink:0}
+
+/* ── LINKEDIN POST ── */
+.li-post{background:#0B1520;border:1px solid var(--border);border-radius:8px;padding:1.2rem 1.3rem;font-size:.87rem;line-height:1.7;color:var(--text);white-space:pre-line}
+
+/* ── FOOTER ── */
+.footer{background:var(--cisco-dark-blue);border-top:1px solid var(--border);padding:1.25rem 2rem;margin-left:var(--nav-width);text-align:center}
+.footer p{font-size:.72rem;color:var(--cisco-gray);margin:0}
+
+/* ── UTILITIES ── */
+.divider{border:none;border-top:1px solid var(--border);margin:1.25rem 0}
+.tag{display:inline-block;font-size:.68rem;font-weight:600;padding:.15rem .5rem;border-radius:4px;margin-right:.3rem}
+.tag.blue{background:rgba(48,112,231,.2);color:var(--cisco-teal)}
+.tag.green{background:rgba(34,197,94,.15);color:var(--cisco-green)}
+.tag.yellow{background:rgba(245,158,11,.15);color:var(--cisco-yellow)}
+.principle{font-size:.75rem;background:rgba(139,92,246,.1);border:1px solid rgba(139,92,246,.2);color:#c4b5fd;padding:.3rem .65rem;border-radius:5px;display:inline-block;margin-bottom:.5rem}
+.outreach-box{background:#0B1520;border:1px dashed var(--cisco-green);border-radius:8px;padding:1rem 1.2rem;font-size:.83rem;color:var(--text)}
+
+@media(max-width:900px){.nav{display:none}.main,.report-header,.footer{margin-left:0}.score-grid{grid-template-columns:1fr}.case-grid{grid-template-columns:1fr}.testi-grid{grid-template-columns:1fr}.impact-strip{grid-template-columns:1fr 1fr}}
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-brand">
+    <div class="title">fehach.bio — Ideas</div>
+    <div class="sub">Feedback from a friend</div>
+    <div class="badge">For Federico Hach</div>
+  </div>
+  <div class="nav-section">Observations</div>
+  <a href="#s1-diagnosis">① Quick read of the site</a>
+  <a href="#s2-problem">② What I noticed</a>
+  <div class="nav-section">Suggestions</div>
+  <a href="#s3-hero" class="sub">→ Hero</a>
+  <a href="#s3-about" class="sub">→ About</a>
+  <a href="#s3-capabilities" class="sub">→ Capabilities</a>
+  <a href="#s3-experience" class="sub">→ Experience</a>
+  <a href="#s3-projects" class="sub">→ Projects</a>
+  <a href="#s3-contact" class="sub">→ Contact</a>
+  <div class="nav-section">Ideas to add</div>
+  <a href="#s4-impact" class="sub">+ Impact numbers</a>
+  <a href="#s4-cases" class="sub">+ Case studies</a>
+  <a href="#s4-testimonials" class="sub">+ Testimonials</a>
+  <a href="#s4-content" class="sub">+ Content ideas</a>
+  <div class="nav-section">Next Steps</div>
+  <a href="#s5-seo">⑤ SEO + LinkedIn</a>
+  <a href="#s6-plan">⑥ Suggested next steps</a>
+  <a href="#s6-post" class="sub">→ LinkedIn post draft</a>
+  <div class="nav-footer">
+    <p>From Luis Chi<br>luchi@cisco.com<br>May 2026</p>
+  </div>
+</nav>
+
+<div class="report-header">
+  <div class="eyebrow">From Luis · Friend-to-Friend · May 2026</div>
+  <h1>fehach.bio — <span>Feedback &amp; Ideas</span> from a Friend</h1>
+  <div class="meta">For <strong>Federico Hach</strong> (CCIE Security #57675) &nbsp;·&nbsp; <strong>May 2026</strong> &nbsp;·&nbsp; Personal &amp; Confidential</div>
+</div>
+
+<div class="main">
+<div class="container">
+
+  <div style="background:linear-gradient(135deg,rgba(22,189,235,.06),rgba(48,112,231,.04));border:1px solid rgba(22,189,235,.2);border-radius:10px;padding:1.4rem 1.6rem;margin-bottom:1.75rem;font-size:.9rem;line-height:1.75;color:var(--text)">
+    <div style="font-size:.68rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--cisco-teal);margin-bottom:.65rem">✉ A note from Luis</div>
+    <p style="margin-bottom:.6rem">Fede — I spent some time on your site this week and put together a few ideas. Everything below is just that: ideas. Pick what resonates, ignore what doesn't. You know your story far better than I do.</p>
+    <p style="margin-bottom:.6rem">The site is already solid — it's clean, well-built, and professional. What I noticed is that a lot of what makes you exceptional doesn't quite come through yet. These are just some thoughts on how to surface more of that.</p>
+    <p style="margin-bottom:0">No rush on any of this. Take what's useful. — <strong>Luis</strong></p>
+    <div style="margin-top:1rem;padding-top:.75rem;border-top:1px solid rgba(22,189,235,.12);font-size:.75rem;color:var(--text-dim)">The amber <span style="background:rgba(245,158,11,.15);border:1px solid rgba(245,158,11,.3);color:var(--cisco-yellow);font-size:.7rem;font-weight:600;padding:.1rem .35rem;border-radius:4px;font-family:monospace">[FEDERICO:]</span> markers throughout are spots where only you know the real number — those are the only things that actually need filling in before any of this goes live.</div>
+  </div>
+
+  <section id="s1-diagnosis">
+    <div class="section-label diagnosis">Section 1 — Quick read of the site</div>
+    <h2>Six things I was watching for</h2>
+    <p style="color:var(--text-dim);font-size:.88rem;margin-bottom:1.2rem">Here's roughly what goes through a hiring manager's or consulting client's head in the first 30 seconds on a site like this — not what the site says it does, but what it <em>communicates</em>. The site is strong in some of these; a couple are easy opportunities.</p>
+    <div class="score-grid">
+      <div class="score-card">
+        <div class="score-badge s3" style="font-size:.75rem">hero</div>
+        <div class="score-card-text">
+          <div class="label">Does it stop the scroll in 5 seconds?</div>
+          <div class="why">The hero tagline is a capability list ("Designing and delivering enterprise security, network visibility, microsegmentation…"). It reads more like a job description than a person. A small tweak to lead with an outcome could change that first impression.</div>
+        </div>
+      </div>
+      <div class="score-card">
+        <div class="score-badge s3" style="font-size:.75rem">proof</div>
+        <div class="score-card-text">
+          <div class="label">Does it show outcomes, not just capabilities?</div>
+          <div class="why">Most bullets are activity-based ("Led", "Designed"). There isn't a metric on the page yet — no "reduced X from Y to Z", no "N banks secured." Adding even one or two specific results would change the texture of the whole site.</div>
+        </div>
+      </div>
+      <div class="score-card">
+        <div class="score-badge s3" style="font-size:.75rem">social</div>
+        <div class="score-card-text">
+          <div class="label">Is there third-party validation anywhere?</div>
+          <div class="why">No testimonials, customer quotes, or named recognitions yet — and this is where I think there's the most opportunity. The certifications (CCIE, CISSP) are there but sit alongside "Education" rather than being framed as proof of delivery. Even one short quote from a former colleague or customer would shift how the whole site reads.</div>
+        </div>
+      </div>
+      <div class="score-card">
+        <div class="score-badge s3" style="font-size:.75rem">CTAs</div>
+        <div class="score-card-text">
+          <div class="label">Is there a clear path for two different visitors?</div>
+          <div class="why">The contact section has LinkedIn + a Gmail address, but no explicit fork for "I want to hire you" vs. "I want to bring you in for a project." Easy fix — the suggestion is in Section 3F.</div>
+        </div>
+      </div>
+      <div class="score-card">
+        <div class="score-badge s4" style="font-size:.75rem">scan</div>
+        <div class="score-card-text">
+          <div class="label">Can a recruiter scan it in 30 seconds?</div>
+          <div class="why">Actually pretty good here — the card grid and section structure are clean, and Cisco tenure + CCIE are easy to find. The one thing missing is a hero line that does the summarising <em>for</em> the reader before they have to dig in.</div>
+        </div>
+      </div>
+      <div class="score-card">
+        <div class="score-badge s3" style="font-size:.75rem">diff</div>
+        <div class="score-card-text">
+          <div class="label">Does it stand out from other CCIEs?</div>
+          <div class="why">"Zero Trust, microsegmentation, AI automation" is on a lot of profiles right now. Federico's real edge — the 50+ LATAM deployments, PCI banking wins, the MBA layered on a dual CCIE, the automation tools built from scratch — isn't visible yet. That's the whole opportunity.</div>
+        </div>
+      </div>
+    </div>
+    <div class="verdict" style="margin-bottom:1rem">
+      The site is beautifully built and technically credible — it shows Federico can ship a polished product, which is itself a signal. What it doesn't show yet is what happened when he deployed things. The gap between what he's <em>actually done</em> and what the site <em>communicates</em> is the whole opportunity here. Everything in the suggestions below is aimed at closing that gap.
+    </div>
+  </section>
+
+  <section id="s2-problem">
+    <div class="section-label problem">Section 2 — What I noticed</div>
+    <h2>The site says what he can do. It doesn't yet show what happened when he did it.</h2>
+    <p>Here's what the site communicates today: <strong>"I know a lot of things."</strong> Here's what a hiring manager or consulting prospect tends to want: <strong>"I went into organizations like yours, fixed a problem like the one you have, and here's what changed."</strong> A lot of people with strong CCIE + CISSP profiles are in market right now with the same vocabulary: Zero Trust, microsegmentation, AI-driven automation, 16+ years. Federico has the same words — and he also has something most of them don't: a <strong>documented track record of delivery</strong> across 50+ enterprise deployments in 6+ countries, PCI-DSS wins in LATAM banking, automation tools that cut analyst query time from hours to seconds, an MBA on top of a dual CCIE and an MSc in Cybersecurity. That track record is real. It just isn't fully visible on the site yet.</p>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-top:.5rem">
+      <div style="background:rgba(239,68,68,.07);border:1px solid rgba(239,68,68,.2);border-radius:8px;padding:1rem 1.1rem">
+        <h4 style="color:#f87171;margin-bottom:.5rem">What's there today</h4>
+        <ul style="font-size:.83rem;color:var(--text-dim)">
+          <li>"Designed and delivered enterprise security solutions"</li>
+          <li>"16+ years of experience"</li>
+          <li>"Recognized for combining deep architecture expertise…"</li>
+          <li>Capability cards with feature names</li>
+          <li>Experience bullets starting with "Led", "Designed", "Supported"</li>
+        </ul>
+      </div>
+      <div style="background:rgba(34,197,94,.07);border:1px solid rgba(34,197,94,.2);border-radius:8px;padding:1rem 1.1rem">
+        <h4 style="color:var(--cisco-green);margin-bottom:.5rem">Where it could go</h4>
+        <ul style="font-size:.83rem;color:var(--text-dim)">
+          <li>"<span class="federico-marker">[FEDERICO: confirm number]</span> LATAM banks now meet PCI-DSS — I built the architecture."</li>
+          <li>"Automated security queries: hours → seconds, for a 50-person SOC"</li>
+          <li>A customer quote. One sentence. Real name or role.</li>
+          <li>Capability cards with outcomes + numbers</li>
+          <li>Experience bullets: Situation → Action → <strong>Result</strong></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="s3-hero">
+    <div class="section-label rewrite">Section 3A — Suggestion: Hero</div>
+    <h2>Hero Tagline</h2>
+    <div class="current-box">
+      <div class="box-label">What's there today</div>
+      <blockquote>"Federico Hach — Designing and delivering enterprise security, network visibility, microsegmentation, and AI-driven automation solutions across the Americas."</blockquote>
+    </div>
+    <ul class="wrong-list">
+      <li><strong>One thing that tends to land well:</strong> specificity over scope. This reads like a job description — it says what Federico does, not what happens when he does it. Any architect could write this sentence.</li>
+      <li><strong>Worth considering:</strong> The hero is the one place where a visitor decides whether to keep reading. Putting the visitor's problem at the centre (rather than a capability list) tends to pull people in faster.</li>
+    </ul>
+    <h3>3 suggested variants — use one, mix them, or ignore entirely</h3>
+    <div class="paste-box">
+      <div class="box-label">📋 Suggested copy — Consulting-leaning</div>
+      <div class="copy-text"><strong>Federico Hach</strong><br>I help LATAM enterprises eliminate security gaps before they become breaches — combining Zero Trust architecture, PCI-DSS delivery, and AI-powered automation built in Python.<br><br><em>Dual CCIE Security + R&amp;S · CISSP · <span class="federico-marker">[FEDERICO: confirm number]</span> enterprise deployments · 16 years</em></div>
+    </div>
+    <div class="paste-box">
+      <div class="box-label">📋 Suggested copy — Hiring-leaning</div>
+      <div class="copy-text"><strong>Federico Hach — Security Architect</strong><br>Senior security architect who ships Zero Trust programs end-to-end — from board-level design to working Python automations. <span class="federico-marker">[FEDERICO: confirm number]</span> enterprise deployments across 6 countries, <span class="federico-marker">[FEDERICO: confirm]</span> LATAM banks compliant with PCI-DSS, and tools that turned hours of manual SOC work into seconds.<br><br><em>CCIE Security #57675 · CISSP · MBA · Open to my next challenge.</em></div>
+    </div>
+    <div class="paste-box">
+      <div class="box-label">📋 Suggested copy — Hybrid (maybe a good starting point)</div>
+      <div class="copy-text"><strong>Federico Hach</strong><br>Cybersecurity architect and automation builder. I design Zero Trust programs that actually get deployed — <span class="federico-marker">[FEDERICO: confirm number]</span> enterprise customers across banking, telecom, and government in Latin America. Dual CCIE. CISSP. MBA. Available for senior architect roles and consulting engagements.</div>
+    </div>
+    <div class="why-box"><strong>One thing that tends to work here:</strong> numbers do more than adjectives. A specific count of deployments creates instant context without needing to claim anything. "Actually get deployed" is also a quiet signal — it's what every architect promises and what Federico can actually show.</div>
+  </section>
+
+  <section id="s3-about">
+    <div class="section-label rewrite">Section 3B — Suggestion: About</div>
+    <h2>About Section</h2>
+    <div class="current-box">
+      <div class="box-label">What's there today</div>
+      <blockquote>"Cybersecurity and Zero Trust Architect with 16+ years of experience… Recognized for combining deep architecture expertise with Python and AI-driven automation to reduce manual security operations from hours to seconds."</blockquote>
+    </div>
+    <ul class="wrong-list">
+      <li><strong>Something worth trying:</strong> opening with a specific moment rather than "16+ years." Credentials are compelling — but they land better once a reader already cares. A concrete example up front tends to earn that attention first.</li>
+      <li><strong>"Recognized for…" is doing quiet harm:</strong> Without saying who recognized Federico or for what, the phrase reads as self-assessment. One named quote or award replaces this and does far more work.</li>
+    </ul>
+    <div class="paste-box">
+      <div class="box-label">📋 Suggested copy — About (reordered: proof → approach → credentials)</div>
+      <div class="copy-text">
+        When <span class="federico-marker">[FEDERICO: name the customer type, e.g. "a major Mexican bank"]</span> needed to reach PCI-DSS compliance without disrupting live payment infrastructure, my team designed and delivered a full microsegmentation architecture in <span class="federico-marker">[FEDERICO: timeframe]</span>. That kind of engagement — high-stakes, technically complex, timeline-constrained — is what I've been doing across Latin America for 16 years.<br><br>
+        I'm a security architect who also writes code. My Python automations have cut manual SOC query time from hours to seconds across multiple customer environments. I think in systems — architecture, policy, workflow — but I stay close to the implementation because that's where security programs actually succeed or fail.<br><br>
+        <span class="federico-marker">[FEDERICO: if you have a recognition quote from a Cisco manager, customer sponsor, or award — paste it here in quotes. Even one line. It changes everything.]</span><br><br>
+        <strong>Credentials:</strong> CCIE Security #57675 · CCIE R&amp;S · CISSP · SCAZT · MBA EGADE (2024–2026) · MSc Cybersecurity, Tec de Monterrey · DevNet Associate · AWS Cloud Practitioner.
+      </div>
+    </div>
+    <div class="why-box"><strong>What tends to happen:</strong> Opening with a specific situation makes the reader picture a real engagement before any credentials are mentioned — so when the credentials appear, they confirm what the reader already suspects rather than asking them to take it on faith.</div>
+  </section>
+
+  <section id="s3-capabilities">
+    <div class="section-label rewrite">Section 3C — Suggestion: Capabilities</div>
+    <h2>Capability Cards</h2>
+    <div class="current-box">
+      <div class="box-label">What's there today (pattern)</div>
+      <blockquote>Card titles: "Zero Trust Architecture" / "Network Security" / "AI-Driven Automation" / "Python &amp; DevSecOps" / "PCI Compliance" — each with a brief description of what the capability is, not what it produces.</blockquote>
+    </div>
+    <ul class="wrong-list">
+      <li><strong>A thought:</strong> feature names without outcomes read as a menu. "Zero Trust Architecture" on its own says the same thing as every other CCIE Security profile. Adding a number or a customer outcome to each card is a low-effort change that shifts the impression significantly.</li>
+    </ul>
+    <div class="principle">One thing that tends to land: convert each card from "I do X" to "when I do X, Y happens."</div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:.75rem;margin-top:.75rem">
+      <div class="paste-box" style="margin-bottom:0">
+        <div class="box-label">📋 Zero Trust Architecture — suggested copy</div>
+        <div class="copy-text" style="font-size:.82rem">Designed and delivered Zero Trust + microsegmentation architectures for <span class="federico-marker">[FEDERICO: confirm number]</span> LATAM enterprises — including <span class="federico-marker">[FEDERICO: industry types, e.g. banking, telecom, government]</span>. Approach: architecture design, ISE/Tetration/ACI policy, phased rollout, and full handover documentation.</div>
+      </div>
+      <div class="paste-box" style="margin-bottom:0">
+        <div class="box-label">📋 AI-Driven Automation — suggested copy</div>
+        <div class="copy-text" style="font-size:.82rem">Built Python + AI agents (including Claude-powered API tools) that reduce manual SOC query time from hours to seconds. <span class="federico-marker">[FEDERICO: confirm specific metric for your CSW OpenAPI Agent]</span>. Available to adapt existing tooling or build new pipelines from scratch.</div>
+      </div>
+      <div class="paste-box" style="margin-bottom:0">
+        <div class="box-label">📋 PCI-DSS Compliance — suggested copy</div>
+        <div class="copy-text" style="font-size:.82rem">Led PCI-DSS scoping, segmentation design, and compliance delivery for <span class="federico-marker">[FEDERICO: number]</span> payment-processing environments in LATAM banking. Familiar with QSA engagement cycles, compensating controls, and audit evidence packaging.</div>
+      </div>
+      <div class="paste-box" style="margin-bottom:0">
+        <div class="box-label">📋 Network Security — suggested copy</div>
+        <div class="copy-text" style="font-size:.82rem">Firewall policy, VPN architecture, network visibility (Stealthwatch/Secure Network Analytics), and threat detection across multi-vendor environments. <span class="federico-marker">[FEDERICO: add a signature deployment or customer type if you can]</span>.</div>
+      </div>
+    </div>
+    <div class="why-box" style="margin-top:.75rem"><strong>Why numbers in cards tend to stick:</strong> "N LATAM enterprises" lands differently than "extensive enterprise experience" — the specificity does the work without needing any extra claims.</div>
+  </section>
+
+  <section id="s3-experience">
+    <div class="section-label rewrite">Section 3D — Suggestion: Experience (Cisco CX)</div>
+    <h2>Experience — Cisco CX Customer Delivery (Nov 2024 – May 2026)</h2>
+    <div class="current-box">
+      <div class="box-label">What's there today (representative bullets)</div>
+      <blockquote>"Led security architecture reviews for enterprise customers across the Americas. Designed microsegmentation strategies using Cisco ISE and ACI. Supported customers through PCI-DSS certification cycles. Delivered Zero Trust workshops and design sessions."</blockquote>
+    </div>
+    <ul class="wrong-list">
+      <li><strong>Something to try:</strong> each bullet currently starts with the action and stops there — no context on what was at stake, nothing on what changed. Adding a result to even two or three of them shifts the whole section.</li>
+      <li><strong>The CX role is worth signalling more clearly:</strong> a senior post-sales delivery architect with named-account responsibility is a relatively rare seat. The bullets could do a better job of showing the scope.</li>
+    </ul>
+    <div class="principle">A simple pattern: "When [customer situation], I [action] — resulting in [outcome]."</div>
+    <div class="paste-box">
+      <div class="box-label">📋 Suggested copy — Cisco CX bullets</div>
+      <div class="copy-text" style="font-size:.84rem">
+        <strong>Cisco — Customer Experience Security Architect, Americas (Nov 2024 – May 2026)</strong><br><br>
+        • When <span class="federico-marker">[FEDERICO: customer type, e.g. a Mexican retail bank]</span> needed PCI-DSS microsegmentation before a <span class="federico-marker">[timeframe]</span> audit deadline, I designed and delivered a full ISE + ACI policy framework — the customer passed the audit with <span class="federico-marker">[zero / minimal]</span> compensating controls required.<br><br>
+        • Automated recurring CSW vulnerability report generation using a Claude AI + REST API agent I built in Python — reducing analyst preparation time from <span class="federico-marker">[X hours]</span> to under <span class="federico-marker">[Y minutes]</span> per cycle across <span class="federico-marker">[N customers]</span>.<br><br>
+        • Led Zero Trust architecture workshops for <span class="federico-marker">[N]</span> enterprise accounts across <span class="federico-marker">[sectors]</span> in the Americas — translating Cisco ZTNA frameworks into phased roadmaps with executive sign-off.<br><br>
+        • Delivered forensic-response tooling (Flask-based) that gave SOC teams same-day packet-level visibility during active incidents — previously requiring multi-day escalation to Cisco TAC. <span class="federico-marker">[FEDERICO: add customer impact if you can quantify it]</span>
+      </div>
+    </div>
+    <div class="why-box"><strong>Why the result line matters:</strong> Hiring managers and consulting clients both do the same thing — they scan for evidence that someone has solved their exact problem before. The result line is that evidence. The action line is just the method.</div>
+  </section>
+
+  <section id="s3-projects">
+    <div class="section-label rewrite">Section 3E — Suggestion: Projects</div>
+    <h2>Projects</h2>
+    <div class="current-box">
+      <div class="box-label">What's there today (pattern)</div>
+      <blockquote>"CSW OpenAPI Agent — Claude AI integration with Tetration REST API for automated security queries. / CSW Red Button — Flask forensics application. / WSA Policy Review Dashboard — web-based policy analysis. / CSW Vulnerability Reports — automated reporting tool."</blockquote>
+    </div>
+    <ul class="wrong-list">
+      <li><strong>A thought:</strong> each project description is technical-first — it says what the tool is, not what it changed for the people using it. A single business-language sentence added to each one would make them legible to a CISO or CTO who isn't deep in the Cisco stack.</li>
+    </ul>
+    <div style="display:grid;gap:.65rem;margin-top:.5rem">
+      <div class="paste-box" style="margin-bottom:0">
+        <div class="box-label">📋 CSW OpenAPI Agent — suggested copy</div>
+        <div class="copy-text" style="font-size:.83rem"><strong>AI-Powered Security Query Agent</strong> (Python · Claude AI · Tetration REST API)<br>Cut analyst time on Cisco Secure Workload (CSW) security queries from <span class="federico-marker">[FEDERICO: confirm — e.g. 2 hours]</span> to under <span class="federico-marker">[X minutes]</span> per investigation. Built to eliminate the manual CLI-diving that burns SOC analyst hours on recurring threat lookups. <span class="federico-marker">[FEDERICO: add link to GitHub if public]</span></div>
+      </div>
+      <div class="paste-box" style="margin-bottom:0">
+        <div class="box-label">📋 CSW Red Button — suggested copy</div>
+        <div class="copy-text" style="font-size:.83rem"><strong>Incident Forensics Toolkit</strong> (Python · Flask)<br>One-click forensic data collection during active security incidents — replacing a multi-step manual process that previously required Cisco TAC escalation. Deployed at <span class="federico-marker">[FEDERICO: number]</span> customer sites. Gives IR teams same-day packet and flow context without waiting on ticket queues.</div>
+      </div>
+      <div class="paste-box" style="margin-bottom:0">
+        <div class="box-label">📋 WSA Policy Dashboard — suggested copy</div>
+        <div class="copy-text" style="font-size:.83rem"><strong>Web Security Policy Analyzer</strong> (Python · Web)<br>Automated review of Cisco WSA policy configurations — surfacing compliance gaps and misconfigured rules that manual review routinely misses. <span class="federico-marker">[FEDERICO: add impact — time saved, number of policies analyzed, customers using it]</span></div>
+      </div>
+    </div>
+    <div class="why-box" style="margin-top:.75rem"><strong>The translation that tends to help:</strong> lead with the outcome (what changed for someone), end with the technology (how). That order works for technical and non-technical readers.</div>
+  </section>
+
+  <section id="s3-contact">
+    <div class="section-label rewrite">Section 3F — Suggestion: Contact</div>
+    <h2>Contact Section</h2>
+    <div class="current-box">
+      <div class="box-label">What's there today</div>
+      <blockquote>LinkedIn link + ccie57676@gmail.com</blockquote>
+    </div>
+    <ul class="wrong-list">
+      <li><strong>One small thing:</strong> Federico owns fehach.bio — using ccie57676@gmail.com alongside that domain creates a small mismatch. It's a quick fix (5 minutes with Cloudflare) and the old address stays as a forward, so nothing breaks.</li>
+      <li><strong>Two audiences, one landing spot:</strong> there's currently no fork for "hiring manager" vs. "consulting client." A few words at the top of the contact section can do that without making it feel like a sales page.</li>
+    </ul>
+    <div class="paste-box">
+      <div class="box-label">📋 Suggested copy — Contact</div>
+      <div class="copy-text">
+        <strong>Let's talk.</strong><br><br>
+        <strong>Looking to hire me full-time?</strong><br>
+        I'm open to senior architect and security leadership roles — CISO, Principal Architect, Head of Security. Connect on <a href="https://linkedin.com/in/fehach" style="color:var(--cisco-teal)">LinkedIn</a> and mention the role.<br><br>
+        <strong>Need a consulting engagement?</strong><br>
+        If your team is navigating Zero Trust, microsegmentation, PCI-DSS, or security automation and you want someone who has done it before — I'm available for project-based work. Email: <em>federico@fehach.bio</em> <span class="federico-marker">[FEDERICO: set up this alias via your domain registrar/Cloudflare — 5 min setup]</span><br><br>
+        <em>Based in Mexico City · Available across Latin America and remote globally</em>
+      </div>
+    </div>
+    <div class="why-box"><strong>The two-path contact section:</strong> each visitor self-selects their own path, which tends to mean a better experience for both. The professional email signals that Federico takes his own brand as seriously as client work — which he does.</div>
+  </section>
+
+  <section id="s4-impact">
+    <div class="section-label add">Section 4A — Idea worth adding: Impact Numbers</div>
+    <h2>What if there were four big stats under the hero?</h2>
+    <p style="font-size:.85rem;color:var(--text-dim);margin-bottom:1rem">Four large numbers under the hero do a lot of work in 3 seconds — they give context before a visitor reads a single sentence. Below is what it could look like, with placeholders for Federico to confirm.</p>
+    <div class="impact-strip" style="margin-bottom:1rem">
+      <div class="impact-cell">
+        <div class="big"><span class="federico-marker">[FEDERICO]</span></div>
+        <div class="label">Enterprise Deployments</div>
+      </div>
+      <div class="impact-cell">
+        <div class="big" style="color:var(--cisco-green)"><span class="federico-marker">[N]</span></div>
+        <div class="label">Countries · LATAM + beyond</div>
+      </div>
+      <div class="impact-cell">
+        <div class="big" style="color:var(--cisco-yellow)">16</div>
+        <div class="label">Years in Cybersecurity</div>
+      </div>
+      <div class="impact-cell">
+        <div class="big" style="color:#c4b5fd">2×</div>
+        <div class="label">CCIE · Security + R&amp;S</div>
+      </div>
+    </div>
+    <div class="current-box">
+      <div class="box-label">HTML snippet — paste after the hero tagline block if this feels right</div>
+      <blockquote style="font-family:monospace;font-size:.75rem;color:var(--cisco-cyber)">
+        &lt;div class="impact-strip"&gt;<br>
+        &nbsp;&nbsp;&lt;div class="impact-cell"&gt;&lt;div class="big"&gt;<span class="federico-marker">[N]</span>+&lt;/div&gt;&lt;div class="label"&gt;Enterprise Deployments&lt;/div&gt;&lt;/div&gt;<br>
+        &nbsp;&nbsp;&lt;div class="impact-cell"&gt;&lt;div class="big"&gt;<span class="federico-marker">[N]</span>&lt;/div&gt;&lt;div class="label"&gt;Countries&lt;/div&gt;&lt;/div&gt;<br>
+        &nbsp;&nbsp;&lt;div class="impact-cell"&gt;&lt;div class="big"&gt;16&lt;/div&gt;&lt;div class="label"&gt;Years in Security&lt;/div&gt;&lt;/div&gt;<br>
+        &nbsp;&nbsp;&lt;div class="impact-cell"&gt;&lt;div class="big"&gt;2×&lt;/div&gt;&lt;div class="label"&gt;CCIE&lt;/div&gt;&lt;/div&gt;<br>
+        &lt;/div&gt;
+      </blockquote>
+    </div>
+    <div class="why-box"><strong>Why numbers tend to stick:</strong> Even rough ones. "50+" communicates more than the best paragraph about experience — specificity does the work without requiring extra claims.</div>
+  </section>
+
+  <section id="s4-cases">
+    <div class="section-label add">Section 4B — Idea worth adding: Case Studies</div>
+    <h2>What if there were 3 anonymised story cards?</h2>
+    <p style="font-size:.85rem;color:var(--text-dim);margin-bottom:1rem">Each card follows the same structure: customer profile (industry + size, no name) → challenge → what Federico did → result. These three are scaffolded from his Cisco CX background — Federico fills in what's real.</p>
+    <div class="case-grid">
+      <div class="case-card">
+        <div class="industry-tag">LATAM Banking · PCI-DSS</div>
+        <h4>Microsegmentation for Payment Infrastructure</h4>
+        <div class="challenge" style="font-size:.78rem;color:var(--text-dim)"><strong style="color:var(--cisco-secondary)">Challenge:</strong> A major retail bank in <span class="federico-marker">[FEDERICO: country]</span> needed to segment cardholder data environments before a QSA audit — without disrupting live payment processing running 24/7.</div>
+        <div style="font-size:.78rem;color:var(--text-dim)"><strong style="color:var(--cisco-secondary)">Approach:</strong> Full Cisco ISE + ACI microsegmentation design, phased policy rollout with shadow mode validation, QSA evidence packaging.</div>
+        <div class="result">✓ Passed PCI-DSS audit in <span class="federico-marker">[FEDERICO: timeframe]</span> · Zero compensating controls <span class="federico-marker">[confirm]</span></div>
+      </div>
+      <div class="case-card">
+        <div class="industry-tag">Telecom Carrier · ISE Rollout</div>
+        <h4>Network Access Control at Carrier Scale</h4>
+        <div class="challenge" style="font-size:.78rem;color:var(--text-dim)"><strong style="color:var(--cisco-secondary)">Challenge:</strong> A national telecom provider with <span class="federico-marker">[FEDERICO: N]</span>k+ endpoints needed a unified NAC policy that could enforce device compliance across distributed infrastructure with no planned downtime window.</div>
+        <div style="font-size:.78rem;color:var(--text-dim)"><strong style="color:var(--cisco-secondary)">Approach:</strong> Cisco ISE deployment in monitor mode → phased enforcement, policy authoring, staff enablement.</div>
+        <div class="result">✓ <span class="federico-marker">[FEDERICO: metric — e.g. 8,000 endpoints onboarded in 6 weeks]</span></div>
+      </div>
+      <div class="case-card">
+        <div class="industry-tag">Government · Zero Trust</div>
+        <h4>Zero Trust Program for a Federal Agency</h4>
+        <div class="challenge" style="font-size:.78rem;color:var(--text-dim)"><strong style="color:var(--cisco-secondary)">Challenge:</strong> A federal government agency needed a Zero Trust roadmap that could pass internal security committee review and be implemented with existing Cisco infrastructure — no greenfield budget.</div>
+        <div style="font-size:.78rem;color:var(--text-dim)"><strong style="color:var(--cisco-secondary)">Approach:</strong> ZTNA architecture workshop series, SCAZT-aligned design, phased implementation with Cisco Duo + ISE integration.</div>
+        <div class="result">✓ <span class="federico-marker">[FEDERICO: outcome — e.g. roadmap approved, first phase delivered in X months]</span></div>
+      </div>
+    </div>
+    <p style="font-size:.75rem;color:var(--cisco-gray);margin-top:.85rem;font-style:italic">All case studies anonymized per NDA — customer details available on request during a conversation. <span class="federico-marker">[FEDERICO: verify each scaffold against your actual engagements before publishing]</span></p>
+  </section>
+
+  <section id="s4-testimonials">
+    <div class="section-label add">Section 4C — Idea worth adding: Testimonials</div>
+    <h2>What if there were one or two quotes from people who've seen the work?</h2>
+    <p style="font-size:.85rem;color:var(--text-dim);margin-bottom:.85rem">Two sentences from a former colleague or customer do more than a full About section. Even a line from an existing LinkedIn recommendation, used with permission, counts. Here are placeholder cards and an outreach note to make it easy.</p>
+    <div class="testi-grid" style="margin-bottom:1rem">
+      <div class="testi-card">
+        <div class="quote"><span class="federico-marker">[FEDERICO: paste quote here — e.g. "Federico delivered the most complex ISE implementation our team had ever attempted, on time, and he trained our staff on the way out. Remarkable."]</span></div>
+        <div class="attr"><span class="federico-marker">[Name, Title, Company]</span> · Former Cisco CX Customer</div>
+      </div>
+      <div class="testi-card">
+        <div class="quote"><span class="federico-marker">[FEDERICO: second quote — ideally from a Cisco manager or peer who can speak to delivery quality and technical depth]</span></div>
+        <div class="attr"><span class="federico-marker">[Name, Title]</span> · Cisco Systems</div>
+      </div>
+    </div>
+    <h3>A note to send — if you feel like reaching out this week</h3>
+    <div class="outreach-box">
+      <p style="margin-bottom:.5rem"><strong style="color:var(--cisco-green)">Subject:</strong> Quick favour — 2 sentences for my site?</p>
+      <p style="font-size:.83rem">Hey [Name], I'm refreshing my personal site and would love to include a short quote from someone who's seen my work up close. Two sentences on anything you observed — the [project name], the quality of delivery, how I engage with customers — totally up to you. Fine to use your name + title, or initials only if you prefer. Would mean a lot. [Federico]</p>
+    </div>
+    <p style="font-size:.75rem;color:var(--cisco-gray);margin-top:.5rem">Send to whoever feels natural — 5 is just a starting point. Expect 2–3 replies. One genuine quote from someone who's seen the work is the highest-leverage single thing on this whole list.</p>
+  </section>
+
+  <section id="s4-content">
+    <div class="section-label add">Section 4D — Idea worth adding: Speaking / Writing / Open Source</div>
+    <h2>Surfacing expertise that's already public — or a roadmap to create some</h2>
+    <p style="font-size:.85rem;color:var(--text-dim);margin-bottom:.85rem">If Federico has Cisco Live talks, published posts, or public GitHub repos, this section makes them findable and adds a different kind of credibility. If these don't exist yet, the table below is a loose roadmap for the next couple of months — entirely optional.</p>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:.75rem;margin-bottom:1rem">
+      <div style="background:var(--surface2);border:1px solid var(--border);border-radius:8px;padding:1rem">
+        <h4 style="color:var(--cisco-teal);margin-bottom:.5rem">Audit: What do you have now?</h4>
+        <ul class="wrong-list" style="font-size:.8rem">
+          <li>Any Cisco Live session recordings (CLUS, CLEUR, CLMX)?</li>
+          <li>Any blog posts, LinkedIn articles, internal wikis?</li>
+          <li>GitHub repos you can make public (sanitized)?</li>
+          <li>Any Cisco design zones, CVDs you contributed to?</li>
+        </ul>
+        <p style="font-size:.78rem;color:var(--cisco-gray)"><span class="federico-marker">[FEDERICO: drop links into this section — anything you can share publicly]</span></p>
+      </div>
+      <div style="background:var(--surface2);border:1px solid var(--border);border-radius:8px;padding:1rem">
+        <h4 style="color:var(--cisco-green);margin-bottom:.5rem">A loose 60-day content idea (if starting from scratch)</h4>
+        <ul style="font-size:.8rem;color:var(--text-dim);margin-left:1.2rem">
+          <li><strong style="color:#fff">Week 1–2:</strong> Open source CSW OpenAPI Agent on GitHub with a README that explains the business problem it solves</li>
+          <li><strong style="color:#fff">Week 3:</strong> LinkedIn article: "What I learned running Zero Trust for 50+ LATAM enterprises"</li>
+          <li><strong style="color:#fff">Week 4–6:</strong> Short blog post on fehach.bio: one case study, written up properly</li>
+          <li><strong style="color:#fff">Week 7–8:</strong> Submit a Cisco Live CLMX abstract (deadline varies — check clmel.cisco.com)</li>
+        </ul>
+      </div>
+    </div>
+    <div class="why-box"><strong>Why public work compounds:</strong> Each article or talk keeps working long after it's published. It's the slowest-to-start and longest-to-pay-off item on this list — which is also why, whenever Federico has the energy for it, it's worth starting.</div>
+  </section>
+
+  <section id="s5-seo">
+    <div class="section-label seo">Section 5 — SEO + LinkedIn</div>
+    <h2>A few meta tags and LinkedIn copy worth updating</h2>
+    <div style="display:grid;gap:.85rem">
+      <div>
+        <h3>Page &lt;title&gt;</h3>
+        <div class="current-box"><div class="box-label">What's there today (assumed)</div><blockquote>Federico Hach</blockquote></div>
+        <div class="paste-box"><div class="box-label">📋 Suggested copy</div><div class="copy-text" style="font-family:monospace;font-size:.83rem">&lt;title&gt;Federico Hach — Zero Trust &amp; Cybersecurity Architect | CCIE Security #57675&lt;/title&gt;</div></div>
+      </div>
+      <div>
+        <h3>Meta Description (160 chars)</h3>
+        <div class="paste-box"><div class="box-label">📋 Suggested copy</div><div class="copy-text" style="font-family:monospace;font-size:.83rem">&lt;meta name="description" content="Senior cybersecurity architect with <span class="federico-marker">[N]</span>+ enterprise deployments across LATAM. Zero Trust, PCI-DSS, AI-driven security automation. CCIE Security #57675 · CISSP · MBA."&gt;</div></div>
+      </div>
+      <div>
+        <h3>OpenGraph Tags (for LinkedIn / Slack previews)</h3>
+        <div class="paste-box"><div class="box-label">📋 Suggested copy</div><div class="copy-text" style="font-family:monospace;font-size:.78rem">
+          &lt;meta property="og:title" content="Federico Hach — Cybersecurity Architect"&gt;<br>
+          &lt;meta property="og:description" content="<span class="federico-marker">[N]</span>+ enterprise Zero Trust and PCI-DSS deployments across LATAM. Available for senior architect roles and consulting engagements."&gt;<br>
+          &lt;meta property="og:image" content="https://fehach.bio/og-image.png"&gt; <span class="federico-marker">[FEDERICO: create a simple branded card image — Canva works fine]</span><br>
+          &lt;meta property="og:url" content="https://fehach.bio"&gt;<br>
+          &lt;meta name="twitter:card" content="summary_large_image"&gt;
+        </div></div>
+      </div>
+      <hr class="divider">
+      <div>
+        <h3>LinkedIn Headline (220 chars max)</h3>
+        <div class="current-box"><div class="box-label">What's there today (likely)</div><blockquote>"Customer Delivery Security Architect at Cisco"</blockquote></div>
+        <div class="paste-box"><div class="box-label">📋 Suggested copy</div><div class="copy-text">Cybersecurity Architect · Zero Trust &amp; PCI-DSS · <span class="federico-marker">[N]</span>+ Enterprise Deployments across LATAM · CCIE Security #57675 · CISSP · MBA · Open to senior architect &amp; consulting roles</div></div>
+      </div>
+      <div>
+        <h3>LinkedIn "About" — 3-sentence version (mirrors site)</h3>
+        <div class="paste-box"><div class="box-label">📋 Suggested copy</div><div class="copy-text">I'm a senior cybersecurity architect who has delivered Zero Trust programs, PCI-DSS compliance, and security automation across <span class="federico-marker">[N]</span>+ enterprise customers in Latin America and beyond. I bring an unusual combination: deep Cisco architecture expertise (CCIE Security + R&amp;S, CISSP), hands-on Python/AI automation skills, and an MBA — so I can operate at the board level and the CLI level in the same week. I'm currently open to senior architect roles and project-based consulting engagements. Feel free to reach out directly.</div></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="s6-plan">
+    <div class="section-label action">Section 6 — Suggested next steps (only if it feels right)</div>
+    <h2>A loose sequence, if any of this resonates</h2>
+    <p style="font-size:.85rem;color:var(--text-dim);margin-bottom:1rem">All the suggested copy above is ready to use or adapt. If anything on this list sounds useful, here's the order that tends to give the most return for the time spent. No obligation on any of it.</p>
+    <ul class="checklist">
+      <li>
+        <div class="check-box"></div>
+        <span class="day-tag">Day 1</span>
+        <div><strong>Update the hero tagline whenever feels right.</strong> The Hybrid variant from Section 3A is a good starting point. The &lt;title&gt; and meta description (Section 5) are a quick add at the same time. <span class="federico-marker">[FEDERICO: confirm your deployment count before going live]</span></div>
+      </li>
+      <li>
+        <div class="check-box"></div>
+        <span class="day-tag">Day 1</span>
+        <div><strong>Set up federico@fehach.bio.</strong> Log into your domain registrar (or Cloudflare) and add a mail forward to your Gmail — 5 minutes. The old address stays as a receive-only fallback, nothing breaks.</div>
+      </li>
+      <li>
+        <div class="check-box"></div>
+        <span class="day-tag">Day 2</span>
+        <div><strong>Update the About section</strong> using the suggested copy in Section 3B. Pick one real engagement as the opening proof point — whatever comes to mind first. If you have a recognition quote, drop it in; otherwise leave the placeholder and come back to it later.</div>
+      </li>
+      <li>
+        <div class="check-box"></div>
+        <span class="day-tag">Day 2</span>
+        <div><strong>Add the impact numbers strip</strong> under the hero (Section 4A) if it feels right. Even rough numbers work — just confirm what you're comfortable publishing.</div>
+      </li>
+      <li>
+        <div class="check-box"></div>
+        <span class="day-tag">Day 3</span>
+        <div><strong>Reach out to a few people</strong> using the note in Section 4C — former colleagues or customers who knew the work well. There's no pressure on timing; this one is purely when it feels natural.</div>
+      </li>
+      <li>
+        <div class="check-box"></div>
+        <span class="day-tag">Day 3</span>
+        <div><strong>Update the Cisco CX experience bullets</strong> (Section 3D). Even just the top two makes a difference. No need to do all of them at once.</div>
+      </li>
+      <li>
+        <div class="check-box"></div>
+        <span class="day-tag">Day 4–5</span>
+        <div><strong>Write one or two case study cards</strong> using the scaffolds in Section 4B. Anonymous is fine. This is the most time-intensive piece — block a couple of hours whenever you have them. <span class="federico-marker">[FEDERICO: your project notes / old SFDC cases might have the metrics you need]</span></div>
+      </li>
+      <li>
+        <div class="check-box"></div>
+        <span class="day-tag">Day 6</span>
+        <div><strong>Update LinkedIn</strong> — new headline + About text from Section 5. Email signature too if you feel like it. If any testimonial replies have come in, add the best one.</div>
+      </li>
+      <li>
+        <div class="check-box"></div>
+        <span class="day-tag">Day 7</span>
+        <div><strong>Post the LinkedIn announcement</strong> when the site feels ready (draft below). One clear post. Let it breathe.</div>
+      </li>
+    </ul>
+  </section>
+
+  <section id="s6-post">
+    <div class="section-label action">Section 6B — LinkedIn Post Draft</div>
+    <h2>A draft post for when you're ready to share the refresh</h2>
+    <p style="font-size:.85rem;color:var(--text-dim);margin-bottom:.85rem">Forward-looking, specific, warm. Two audiences addressed without being pushy to either. Use it as-is or as a starting point — Federico's voice will make it better.</p>
+    <div class="li-post">After 16 years in enterprise cybersecurity — building Zero Trust programs, microsegmentation architectures, and automation tools across [N]+ deployments in LATAM — I decided it was time to build something that shows the work, not just lists it.
+
+I just refreshed fehach.bio.
+
+It has case studies, actual metrics, and the projects I built along the way (including an AI agent that cut SOC query time from hours to seconds — built before "AI tooling" became a buzzword).
+
+I'm now exploring what's next.
+
+Two paths I'm genuinely excited about:
+
+→ A senior cybersecurity architect or security leadership role where I can combine deep technical delivery with the strategic layer my MBA added.
+
+→ Project-based consulting engagements — if your team is navigating Zero Trust, PCI-DSS, or security automation and you want someone who has done it before, let's talk.
+
+CCIE Security #57675 · CCIE R&S · CISSP · MBA EGADE · MSc Cybersecurity
+
+If you know of something that fits — or just want to catch up — my DMs are open. And the site is at fehach.bio.
+
+<em style="color:var(--text-dim)">[FEDERICO: add 3–5 relevant hashtags: #ZeroTrust #CyberSecurity #CCIE #NetworkSecurity #OpenToWork — note that #OpenToWork has different connotations; use or skip based on your preference]</em></div>
+    <div class="why-box" style="margin-top:.75rem"><strong>Why this framing tends to land:</strong> it reads like someone moving toward something, not away from something. That energy comes through — and it's also true.</div>
+    <hr class="divider">
+    <div style="background:var(--surface2);border:1px solid var(--cisco-blue);border-radius:8px;padding:1.1rem 1.25rem;margin-top:.5rem">
+      <h3 style="color:var(--cisco-teal);margin-bottom:.5rem">From Luis</h3>
+      <p style="font-size:.87rem;line-height:1.7;color:var(--text)">Fede — these are just ideas. Take whatever's useful, ignore what isn't, and rewrite everything in your own voice — that'll always be better than anything I drafted. The site already shows you can build something polished. What these suggestions try to do is help more of the actual work come through.</p>
+      <p style="font-size:.87rem;line-height:1.7;color:var(--text);margin-bottom:0">Whenever you're ready. No rush on any of it. I'm around if you want to talk through any of this. — <strong>Luis</strong></p>
+      <p style="font-size:.78rem;color:var(--cisco-gray);margin-top:.75rem;margin-bottom:0">luchi@cisco.com &nbsp;·&nbsp; May 2026</p>
+    </div>
+  </section>
+
+</div>
+</div>
+
+<footer class="footer">
+  <p>Prepared by Luis Chi (luchi@cisco.com) using August digital twin AI agent using Intel skills &nbsp;·&nbsp; May 2026 &nbsp;·&nbsp; Confidential — For Federico Hach</p>
+</footer>
+
+</body>
+</html>

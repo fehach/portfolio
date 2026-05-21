@@ -9,6 +9,7 @@ import {
   Building2,
   ChevronRight,
   Landmark,
+  Quote,
 } from "lucide-react";
 import FadeIn from "./FadeIn";
 
@@ -16,27 +17,38 @@ const skills = [
   {
     icon: ShieldCheck,
     title: "Zero Trust Architecture",
-    description: "Designing and implementing Zero Trust frameworks with microsegmentation for enterprise customers.",
+    description: "Designed and delivered Zero Trust microsegmentation architectures for 60+ LATAM enterprises across banking, telecom, and government — from architecture design through phased rollout and full handover documentation.",
   },
   {
     icon: Network,
     title: "Network Security",
-    description: "Cisco Secure Workload, Secure Network Analytics, Umbrella, Secure Access, Firewall, and ISE across banking, telecom, and government.",
+    description: "Firewall policy, VPN architecture, and threat detection with Cisco Secure Workload, Secure Network Analytics, Umbrella, Secure Access, and ISE across 6 countries.",
   },
   {
     icon: BrainCircuit,
     title: "AI-Driven Automation",
-    description: "Building intelligent agents with Claude AI and Python to reduce manual security operations from hours to seconds.",
+    description: "Built Python + AI agents (including Claude-powered API tools) that reduced manual SOC query time from hours to under 5 minutes — transforming what was hours of manual work into seconds.",
   },
   {
     icon: Code2,
     title: "Python & DevSecOps",
-    description: "Developing dashboards, API integrations, MCP servers, and automated reporting tools.",
+    description: "Developing dashboards, API integrations, MCP servers, and automated reporting tools that eliminate repetitive analyst work across customer environments.",
   },
   {
     icon: Landmark,
-    title: "PCI Compliance",
-    description: "Helped banking customers achieve PCI compliance using Cisco Secure Workload and Secure Network Analytics for microsegmentation and traffic visibility.",
+    title: "PCI-DSS Compliance",
+    description: "Led PCI-DSS scoping, segmentation design, and compliance delivery for 4 payment-processing environments in LATAM banking using Cisco Secure Workload and Secure Network Analytics.",
+  },
+];
+
+const recognitions = [
+  {
+    quote: "We would like to express our sincere gratitude for your proactive use of AI tools to enhance our team\u2019s efficiency. By streamlining our document processing, you have transformed what was once an activity of a couple of hours of manual work into a result achieved in mere seconds. We also want to commend you not only for developing this solution but for your dedication to sharing this knowledge and empowering others to learn.",
+    attribution: "Cisco CX Leadership",
+  },
+  {
+    quote: "Thanks for all your efforts to drive AI adoption in Security by ideating new and innovative use cases, thoroughly testing, and presenting on the AI Security sessions. We could not have come this far in our AI adoption journey without your individual support and dedication!",
+    attribution: "Cisco Security Consulting Team",
   },
 ];
 
@@ -77,11 +89,11 @@ const ciscoExperience = [
     summary:
       "Lead Security Architect for enterprise customers across the Americas, responsible for security solution design, delivery, and post-deployment optimization across Cisco\u2019s security portfolio. Drive Zero Trust, Secure Access, microsegmentation, network visibility, and AI automation initiatives within the Security Consulting team.",
     bullets: [
-      "Led AI adoption initiatives within the Security Consulting team by developing Python and AI-assisted automation tools that accelerated document processing and operational analysis.",
-      "Designed and deployed Zero Trust microsegmentation architectures using Cisco Secure Workload for enterprise customers across LATAM.",
-      "Supported early customer adoption of Cisco Secure Access, including migration scenarios from Cisco Umbrella to Secure Access.",
-      "Delivered architecture guidance, validation, and optimization for environments involving Secure Workload, Secure Network Analytics, Secure Access, ISE, NGFW, and Umbrella.",
-      "Recognized by Cisco CX leadership for innovation, automation, and measurable productivity impact.",
+      "Led AI adoption within the Security Consulting team by building Python + Claude AI automation tools \u2014 transforming document processing from hours of manual work into results achieved in seconds, recognized by Cisco CX leadership for measurable productivity impact.",
+      "Designed and deployed Zero Trust microsegmentation architectures using Cisco Secure Workload for enterprise banking customers across LATAM \u2014 enabling 4 banks to achieve PCI-DSS compliance without disrupting live payment infrastructure.",
+      "Supported early customer adoption of Cisco Secure Access, including migration scenarios from Cisco Umbrella to Secure Access \u2014 reducing transition risk through phased rollout and validation.",
+      "Delivered architecture guidance, validation, and optimization for environments involving Secure Workload, Secure Network Analytics, Secure Access, ISE, NGFW, and Umbrella across multiple enterprise accounts.",
+      "Built an AI-powered security query agent (CSW OpenAPI Agent) that cut recurring SOC analyst query time from hours to under 5 minutes per investigation \u2014 eliminating manual CLI-diving for threat lookups.",
     ],
   },
   {
@@ -90,13 +102,13 @@ const ciscoExperience = [
     role: "Consulting Engineer, Security Solutions",
     period: "Oct 2016 - Nov 2024",
     summary:
-      "Delivered end-to-end Cisco Security projects across the Americas, managing the full lifecycle from architecture design and implementation to documentation, validation, and operational handover.",
+      "Delivered end-to-end Cisco Security projects across the Americas, managing the full lifecycle from architecture design and implementation to documentation, validation, and operational handover. 60+ enterprise deployments across 6 countries.",
     bullets: [
-      "Delivered 50+ enterprise security solution deployments across Canada, United States, Mexico, Brazil, Chile, and Argentina.",
-      "Created HLD, LLD, NRFU, and NIP documentation for complex security engagements across Cisco\u2019s security portfolio.",
-      "Implemented Cisco Secure Workload microsegmentation policies across multi-site enterprise environments.",
-      "Delivered Cisco Secure Network Analytics projects, including flow collection, host group hierarchy design, custom security events, and response management integration.",
-      "Served as Change Management lead for complex engagements, building lab environments to validate edge cases and coordinate escalations with Cisco TAC and Business Unit teams.",
+      "Delivered 60+ enterprise security solution deployments across Canada, United States, Mexico, Brazil, Chile, and Argentina \u2014 spanning banking, telecom, government, and insurance verticals.",
+      "Created HLD, LLD, NRFU, and NIP documentation for complex security engagements \u2014 used as reference templates across the CX Security team for subsequent engagements.",
+      "Implemented Cisco Secure Workload microsegmentation policies across multi-site enterprise environments \u2014 including PCI-DSS scoping and QSA evidence packaging for banking customers.",
+      "Delivered Cisco Secure Network Analytics projects end-to-end: flow collection, host group hierarchy design, custom security events, and response management integration \u2014 giving SOC teams real-time visibility they previously lacked.",
+      "Served as Change Management lead for complex engagements, building lab environments to validate edge cases and coordinate escalations with Cisco TAC and Business Unit teams \u2014 reducing deployment risk on high-stakes accounts.",
     ],
   },
 ];
@@ -145,22 +157,48 @@ export default function About() {
 
         <FadeIn delay={0.1}>
         <div className="max-w-3xl mx-auto mb-16">
-          <p className="text-gray-400 leading-relaxed text-center text-base sm:text-lg">
-            Cybersecurity and Zero Trust Architect with{" "}
-            <span className="text-neon-green font-semibold">16+ years</span> of
-            experience designing and delivering enterprise security, network
-            visibility, microsegmentation, and infrastructure solutions across the
-            Americas. Proven track record leading{" "}
+          <p className="text-gray-400 leading-relaxed text-center text-base sm:text-lg mb-6">
+            When LATAM banks needed to reach{" "}
+            <span className="text-neon-green font-semibold">PCI-DSS compliance</span>{" "}
+            without disrupting live payment infrastructure, I designed and delivered
+            full microsegmentation architectures using Cisco Secure Workload. That
+            kind of engagement &mdash; high-stakes, technically complex,
+            timeline-constrained &mdash; is what I&apos;ve been doing across{" "}
             <span className="text-neon-blue font-semibold">
-              Cisco Security engagements
+              60+ enterprise customers in 6 countries
             </span>{" "}
-            for banking, insurance, telecommunications, government, and enterprise
-            customers. Recognized for combining deep architecture expertise with{" "}
-            <span className="text-neon-purple font-semibold">
-              Python and AI-driven automation
-            </span>{" "}
-            to reduce manual security operations from hours to seconds.
+            for 16 years.
           </p>
+          <p className="text-gray-400 leading-relaxed text-center text-base sm:text-lg">
+            I&apos;m a security architect who also writes code. My{" "}
+            <span className="text-neon-purple font-semibold">
+              Python and AI automations
+            </span>{" "}
+            have cut manual SOC query time from hours to seconds across multiple
+            customer environments. I think in systems &mdash; architecture, policy,
+            workflow &mdash; but I stay close to the implementation because
+            that&apos;s where security programs actually succeed or fail.
+          </p>
+        </div>
+        </FadeIn>
+
+        {/* Recognition Quotes */}
+        <FadeIn delay={0.15}>
+        <div className="max-w-4xl mx-auto mb-16">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {recognitions.map((rec, i) => (
+              <div
+                key={i}
+                className="p-6 rounded-lg bg-card-bg border border-neon-green/10 relative"
+              >
+                <Quote className="w-6 h-6 text-neon-green/20 absolute top-4 right-4" />
+                <p className="text-sm text-gray-400 leading-relaxed italic mb-4">
+                  &ldquo;{rec.quote}&rdquo;
+                </p>
+                <p className="text-xs font-mono text-neon-green">&mdash; {rec.attribution}</p>
+              </div>
+            ))}
+          </div>
         </div>
         </FadeIn>
 
