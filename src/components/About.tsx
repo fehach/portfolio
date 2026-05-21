@@ -171,6 +171,16 @@ export default function About() {
             </span>{" "}
             for 16 years.
           </p>
+          <p className="text-gray-400 leading-relaxed text-center text-base sm:text-lg mb-6">
+            I also deployed{" "}
+            <span className="text-neon-blue font-semibold">
+              Cisco Secure Network Analytics
+            </span>{" "}
+            to provide full traffic visibility between IT and OT environments
+            &mdash; enabling compliance-driven segmentation and integrating with{" "}
+            <span className="text-neon-green font-semibold">Cisco ISE</span>{" "}
+            for automated threat response and containment actions in real time.
+          </p>
           <p className="text-gray-400 leading-relaxed text-center text-base sm:text-lg">
             I&apos;m a security architect who also writes code. My{" "}
             <span className="text-neon-purple font-semibold">
