@@ -14,7 +14,7 @@ const featuredProject: Project = {
   description:
     "Cut analyst time on Cisco Secure Workload security queries from hours to under 5 minutes per investigation. AI-powered agent that interprets natural language questions, generates live API calls, and presents results in real-time.",
   longDescription:
-    "Built to eliminate the manual CLI-diving that burns SOC analyst hours on recurring threat lookups. Features natural language Q&A about your CSW deployment, live API calls with sandbox validation, pre-built queries for common operations, safe mode that shows API calls before executing, and CSV export. Built with Python, Claude AI, and the Tetration REST API.",
+    "Built to eliminate the manual process of navigating through multiple dashboards to get the information needed. Key feature: microsegmentation maturity assessment that evaluates the readiness and enforcement state of application segmentation policies. Also features natural language Q&A about your CSW deployment, live API calls with sandbox validation, pre-built queries for common operations, safe mode that shows API calls before executing, and CSV export. Built with Python, Claude AI, and the Tetration REST API.",
   tags: ["Python", "Claude AI", "REST API", "Cisco CSW", "NLP", "Automation"],
   icon: Bot,
   screenshot: "/screenshots/openapi-agent.png",
