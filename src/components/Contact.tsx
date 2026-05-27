@@ -1,4 +1,5 @@
 import { Mail, Shield, Briefcase } from "lucide-react";
+import ViewCounter from "./ViewCounter";
 
 function LinkedinIcon({ className }: { className?: string }) {
   return (
@@ -92,9 +93,12 @@ export function Footer() {
           </span>
         </div>
 
-        <p className="text-xs text-gray-600 font-mono">
-          &copy; {new Date().getFullYear()} Federico Hach. Built with Next.js &amp; Windsurf.
-        </p>
+        <div className="flex flex-col items-center gap-1">
+          <p className="text-xs text-gray-600 font-mono">
+            &copy; {new Date().getFullYear()} Federico Hach. Built with Next.js &amp; Windsurf.
+          </p>
+          <ViewCounter />
+        </div>
 
         <div className="flex gap-4">
           <a
