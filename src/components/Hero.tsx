@@ -8,6 +8,7 @@ const titles = [
   "Zero Trust Strategist",
   "Python & AI Automation",
   "Microsegmentation Expert",
+  "Strategic Security Transformation Architect",
 ];
 
 const impactStats = [
