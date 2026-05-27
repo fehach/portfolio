@@ -335,66 +335,80 @@ export default function About() {
         </div>
         </FadeIn>
 
-        {/* Professional Experience */}
+        {/* Professional Experience - Interactive Timeline */}
         <FadeIn delay={0.1}>
         <div className="mt-16">
-          <div className="flex items-center gap-3 mb-8">
+          <div className="flex items-center gap-3 mb-10">
             <Briefcase className="w-5 h-5 text-neon-green" />
-            <h3 className="text-xl font-bold text-foreground">Professional Experience</h3>
+            <h3 className="text-xl font-bold text-foreground">Career Timeline</h3>
           </div>
 
-          <div className="space-y-8">
-            {ciscoExperience.map((exp) => (
-              <div
-                key={exp.role}
-                className="p-6 sm:p-8 rounded-lg bg-card-bg border border-card-border hover:border-neon-green/20 transition-all duration-300"
-              >
-                <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 mb-3">
-                  <div>
-                    <h4 className="font-bold text-foreground text-lg">{exp.role}</h4>
-                    <p className="text-sm text-neon-blue">{exp.company} &middot; {exp.location}</p>
+          <div className="relative">
+            {/* Vertical line */}
+            <div className="absolute left-4 sm:left-1/2 top-0 bottom-0 w-px bg-gradient-to-b from-neon-green/60 via-neon-blue/40 to-gray-700" />
+
+            {/* Cisco Experience nodes */}
+            {ciscoExperience.map((exp, idx) => (
+              <FadeIn key={exp.role} delay={0.15 * idx}>
+              <div className={`relative flex items-start gap-6 mb-10 ${idx % 2 === 0 ? 'sm:flex-row' : 'sm:flex-row-reverse'}`}>
+                {/* Timeline dot */}
+                <div className="absolute left-4 sm:left-1/2 -translate-x-1/2 w-4 h-4 rounded-full bg-neon-green border-2 border-background shadow-[0_0_12px_rgba(0,255,136,0.4)] z-10" />
+
+                {/* Spacer for mobile */}
+                <div className="w-10 sm:hidden flex-shrink-0" />
+
+                {/* Content card */}
+                <div className={`flex-1 sm:w-[calc(50%-2rem)] ${idx % 2 === 0 ? 'sm:pr-10' : 'sm:pl-10'}`}>
+                  <div className="p-5 sm:p-6 rounded-lg bg-card-bg border border-card-border hover:border-neon-green/30 transition-all duration-300 group">
+                    <span className="inline-block text-xs font-mono text-neon-green px-3 py-1 rounded-full border border-neon-green/20 bg-neon-green/5 mb-3">
+                      {exp.period}
+                    </span>
+                    <h4 className="font-bold text-foreground text-lg mb-1">{exp.role}</h4>
+                    <p className="text-sm text-neon-blue mb-3">{exp.company} &middot; {exp.location}</p>
+                    <p className="text-sm text-gray-400 leading-relaxed mb-3">{exp.summary}</p>
+                    <ul className="space-y-2">
+                      {exp.bullets.map((bullet, i) => (
+                        <li key={i} className="flex gap-2 text-sm text-gray-500">
+                          <ChevronRight className="w-4 h-4 text-neon-green/60 flex-shrink-0 mt-0.5" />
+                          <span>{bullet}</span>
+                        </li>
+                      ))}
+                    </ul>
                   </div>
-                  <span className="text-xs font-mono text-neon-green whitespace-nowrap px-3 py-1 rounded-full border border-neon-green/20 bg-neon-green/5 self-start">
-                    {exp.period}
-                  </span>
                 </div>
-                <p className="text-sm text-gray-400 leading-relaxed mb-4">{exp.summary}</p>
-                <ul className="space-y-2">
-                  {exp.bullets.map((bullet, i) => (
-                    <li key={i} className="flex gap-2 text-sm text-gray-500">
-                      <ChevronRight className="w-4 h-4 text-neon-green/60 flex-shrink-0 mt-0.5" />
-                      <span>{bullet}</span>
-                    </li>
-                  ))}
-                </ul>
+
+                {/* Empty spacer for the other side */}
+                <div className="hidden sm:block sm:w-[calc(50%-2rem)]" />
               </div>
+              </FadeIn>
             ))}
-          </div>
-        </div>
-        </FadeIn>
 
-        {/* Earlier Experience */}
-        <FadeIn delay={0.1}>
-        <div className="mt-10">
-          <div className="flex items-center gap-3 mb-6">
-            <Building2 className="w-5 h-5 text-gray-500" />
-            <h3 className="text-lg font-bold text-gray-400">Earlier Experience</h3>
-          </div>
-          <div className="space-y-4">
-            {earlierExperience.map((exp) => (
-              <div
-                key={exp.company}
-                className="p-5 rounded-lg bg-card-bg border border-card-border hover:border-card-border/80 transition-all duration-300"
-              >
-                <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-1 mb-2">
-                  <div>
-                    <h4 className="font-semibold text-foreground">{exp.role}</h4>
-                    <p className="text-sm text-gray-500">{exp.company}</p>
+            {/* Earlier Experience nodes */}
+            {earlierExperience.map((exp, idx) => (
+              <FadeIn key={exp.company} delay={0.15 * (idx + ciscoExperience.length)}>
+              <div className={`relative flex items-start gap-6 mb-10 ${(idx + ciscoExperience.length) % 2 === 0 ? 'sm:flex-row' : 'sm:flex-row-reverse'}`}>
+                {/* Timeline dot */}
+                <div className="absolute left-4 sm:left-1/2 -translate-x-1/2 w-3 h-3 rounded-full bg-gray-600 border-2 border-background z-10" />
+
+                {/* Spacer for mobile */}
+                <div className="w-10 sm:hidden flex-shrink-0" />
+
+                {/* Content card */}
+                <div className={`flex-1 sm:w-[calc(50%-2rem)] ${(idx + ciscoExperience.length) % 2 === 0 ? 'sm:pr-10' : 'sm:pl-10'}`}>
+                  <div className="p-4 sm:p-5 rounded-lg bg-card-bg border border-card-border hover:border-card-border/80 transition-all duration-300">
+                    <span className="inline-block text-xs font-mono text-gray-500 mb-2">
+                      {exp.period}
+                    </span>
+                    <h4 className="font-semibold text-foreground mb-1">{exp.role}</h4>
+                    <p className="text-sm text-gray-500 mb-2">{exp.company}</p>
+                    <p className="text-sm text-gray-500 leading-relaxed">{exp.description}</p>
                   </div>
-                  <span className="text-xs font-mono text-gray-500 whitespace-nowrap">{exp.period}</span>
                 </div>
-                <p className="text-sm text-gray-500 leading-relaxed">{exp.description}</p>
+
+                {/* Empty spacer */}
+                <div className="hidden sm:block sm:w-[calc(50%-2rem)]" />
               </div>
+              </FadeIn>
             ))}
           </div>
         </div>
