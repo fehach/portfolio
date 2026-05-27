@@ -55,13 +55,34 @@ const recognitions = [
 ];
 
 const certifications = [
-  "CISSP",
-  "CCIE Security #57675",
-  "CCIE Routing & Switching #57675",
-  "SCAZT",
-  "DevNet Associate",
-  "AWS Cloud Practitioner",
-  "AI Technical Practitioner",
+  {
+    name: "CCIE Security",
+    badge: "https://images.credly.com/images/726a322c-efb3-42d7-b87e-8ce8a587ec57/cisco_ccie_security.png",
+  },
+  {
+    name: "CCIE Enterprise",
+    badge: "https://images.credly.com/images/838c1e62-78d4-4214-a51e-f136beabf891/CCIE_Enterprise_large.png",
+  },
+  {
+    name: "CISSP",
+    badge: "https://images.credly.com/images/de7e10b8-25a9-420b-834c-1e9cffd3b2fa/image.png",
+  },
+  {
+    name: "AWS Cloud Practitioner",
+    badge: "https://images.credly.com/images/00634f82-b07f-4bbd-a6bb-53de397fc3a6/image.png",
+  },
+  {
+    name: "AI Technical Practitioner",
+    badge: "https://images.credly.com/images/ef187a35-68d1-48ea-85f2-0ac1fbdd0b5f/blob",
+  },
+  {
+    name: "Secure Cloud Access",
+    badge: "https://images.credly.com/images/b873bef6-d866-4464-8e33-6c5b051513dd/blob",
+  },
+  {
+    name: "CCNA Automation",
+    badge: "https://images.credly.com/images/6226d25d-d002-4de7-92bc-4263b44483b5/blob",
+  },
 ];
 
 const education = [
@@ -243,14 +264,26 @@ export default function About() {
             <Award className="w-5 h-5 text-neon-blue" />
             <h3 className="text-xl font-bold text-foreground">Certifications</h3>
           </div>
-          <div className="flex flex-wrap gap-3">
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4">
             {certifications.map((cert) => (
-              <span
-                key={cert}
-                className="px-4 py-2 rounded-lg bg-card-bg border border-neon-blue/20 text-sm font-mono text-neon-blue hover:border-neon-blue/50 hover:shadow-[0_0_12px_rgba(0,212,255,0.15)] transition-all duration-300"
+              <a
+                key={cert.name}
+                href="https://www.credly.com/users/federico-hach"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group flex flex-col items-center gap-2 p-4 rounded-lg bg-card-bg border border-card-border hover:border-neon-blue/40 hover:shadow-[0_0_16px_rgba(0,212,255,0.1)] transition-all duration-300"
               >
-                {cert}
-              </span>
+                <img
+                  src={cert.badge}
+                  alt={cert.name}
+                  width={80}
+                  height={80}
+                  className="group-hover:scale-110 transition-transform duration-300"
+                />
+                <span className="text-xs font-mono text-gray-400 text-center leading-tight group-hover:text-neon-blue transition-colors">
+                  {cert.name}
+                </span>
+              </a>
             ))}
           </div>
         </div>
