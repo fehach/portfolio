@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { ChevronDown, Shield, Terminal } from "lucide-react";
+import ParticleNetwork from "./ParticleNetwork";
 
 const titles = [
   "Security Architect",
@@ -50,6 +51,7 @@ export default function Hero() {
       id="home"
       className="relative min-h-screen flex items-center justify-center cyber-grid overflow-hidden"
     >
+      <ParticleNetwork />
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-background" />
       <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-neon-green/5 rounded-full blur-[120px]" />
       <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-neon-blue/5 rounded-full blur-[120px]" />
