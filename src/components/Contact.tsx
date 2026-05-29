@@ -87,9 +87,9 @@ export function Footer() {
     <footer className="border-t border-card-border py-8 px-4">
       <div className="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
         <div className="flex items-center gap-2">
-          <Shield className="w-4 h-4 text-neon-green" />
+          <img src="/logo-fhs.png" alt="FHS" className="w-6 h-6" />
           <span className="text-xs font-mono text-gray-500">
-            FHACH<span className="text-neon-green">.SEC</span>
+            FHS<span className="text-neon-green">.SEC</span>
           </span>
         </div>
 

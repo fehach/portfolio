@@ -128,7 +128,7 @@ const ciscoExperience = [
       "Delivered end-to-end Cisco Security projects across the Americas, managing the full lifecycle from architecture design and implementation to documentation, validation, and operational handover. 60+ enterprise deployments across 6 countries.",
     bullets: [
       "Delivered 60+ enterprise security solution deployments across Canada, United States, Mexico, Brazil, Chile, and Argentina \u2014 spanning banking, telecom, government, and insurance verticals.",
-      "Created HLD, LLD, NRFU, and NIP documentation for complex security engagements \u2014 used as reference templates across the CX Security team for subsequent engagements.",
+      "Created High Level Design, Low Level Design, and Test Plan documentation for complex security engagements, which ended up being used as reference templates across the CX Security team.",
       "Implemented Cisco Secure Workload microsegmentation policies across multi-site enterprise environments \u2014 including PCI-DSS scoping and QSA evidence packaging for banking customers.",
       "Delivered Cisco Secure Network Analytics projects end-to-end: flow collection, host group hierarchy design, custom security events, and response management integration \u2014 giving SOC teams real-time visibility they previously lacked.",
       "Served as Change Management lead for complex engagements, building lab environments to validate edge cases and coordinate escalations with Cisco TAC and Business Unit teams \u2014 reducing deployment risk on high-stakes accounts.",

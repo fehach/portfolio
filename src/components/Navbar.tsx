@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { Menu, X, Shield } from "lucide-react";
+import { Menu, X } from "lucide-react";
 
 const navLinks = [
   { label: "Home", href: "#home" },
@@ -31,9 +31,9 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           <a href="#home" className="flex items-center gap-2 group">
-            <Shield className="w-6 h-6 text-neon-green transition-all group-hover:drop-shadow-[0_0_8px_rgba(0,255,136,0.6)]" />
+            <img src="/logo-fhs.png" alt="FHS" className="w-8 h-8 transition-all group-hover:drop-shadow-[0_0_8px_rgba(0,255,136,0.6)]" />
             <span className="font-mono text-sm font-semibold tracking-wider text-foreground">
-              FHACH<span className="text-neon-green">.SEC</span>
+              FHS<span className="text-neon-green">.SEC</span>
             </span>
           </a>
 

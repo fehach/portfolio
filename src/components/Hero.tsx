@@ -57,6 +57,12 @@ export default function Hero() {
       <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-neon-blue/5 rounded-full blur-[120px]" />
 
       <div className="relative z-10 max-w-4xl mx-auto px-4 text-center">
+        <img
+          src="/logo-fhs.png"
+          alt="FHS Logo"
+          className="w-64 sm:w-80 mx-auto mb-6 drop-shadow-[0_0_20px_rgba(0,212,255,0.3)]"
+        />
+
         <div className="inline-flex items-center gap-2 px-4 py-2 mb-8 rounded-full border border-neon-green/20 bg-neon-green/5">
           <Shield className="w-4 h-4 text-neon-green" />
           <span className="text-xs font-mono text-neon-green tracking-wider uppercase">
