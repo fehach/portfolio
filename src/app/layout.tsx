@@ -2,6 +2,10 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 
+const siteUrl =
+  process.env.NEXT_PUBLIC_SITE_URL ??
+  (process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : "http://localhost:3000");
+
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -13,6 +17,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL(siteUrl),
   title: "Federico Hach \u2014 Zero Trust & Cybersecurity Architect | CCIE Security #57675",
   description:
     "Senior cybersecurity architect with 60+ enterprise deployments across LATAM. Zero Trust, PCI-DSS, AI-driven security automation. CCIE Security #57675 \u00B7 CISSP \u00B7 MBA.",
@@ -34,9 +39,14 @@ export const metadata: Metadata = {
     description:
       "60+ enterprise Zero Trust and PCI-DSS deployments across LATAM. Available for senior architect roles and consulting engagements.",
     type: "website",
+    images: ["/og-image.svg"],
+  },
+  alternates: {
+    canonical: "/",
   },
   twitter: {
     card: "summary_large_image",
+    images: ["/og-image.svg"],
   },
 };
 

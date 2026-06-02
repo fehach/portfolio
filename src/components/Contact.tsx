@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { Mail, Shield, Briefcase } from "lucide-react";
 import ViewCounter from "./ViewCounter";
 
@@ -77,6 +78,23 @@ export default function Contact() {
         <p className="text-xs text-gray-500 font-mono">
           Based in Mexico City &middot; Available across Latin America and remote globally
         </p>
+
+        <div className="mt-6 flex flex-wrap justify-center gap-2">
+          {[
+            "Senior Security Architect roles",
+            "Principal Architect opportunities",
+            "Zero Trust advisory",
+            "PCI-DSS segmentation consulting",
+            "AI security automation projects",
+          ].map((item) => (
+            <span
+              key={item}
+              className="px-3 py-1 rounded-full border border-neon-purple/20 bg-neon-purple/5 text-xs font-mono text-neon-purple/80"
+            >
+              {item}
+            </span>
+          ))}
+        </div>
       </div>
     </section>
   );
@@ -87,7 +105,7 @@ export function Footer() {
     <footer className="border-t border-card-border py-8 px-4">
       <div className="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
         <div className="flex items-center gap-2">
-          <img src="/logo-fhs.png" alt="FHS" className="w-6 h-6" />
+          <Image src="/logo-fhs.png" alt="FHS" width={24} height={24} className="w-6 h-6" />
           <span className="text-xs font-mono text-gray-500">
             FHS<span className="text-neon-green">.SEC</span>
           </span>

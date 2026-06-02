@@ -1,3 +1,4 @@
+import Image from "next/image";
 import {
   BrainCircuit,
   Network,
@@ -6,7 +7,6 @@ import {
   Award,
   GraduationCap,
   Briefcase,
-  Building2,
   ChevronRight,
   Landmark,
   Quote,
@@ -19,12 +19,12 @@ const skills = [
   {
     icon: ShieldCheck,
     title: "Zero Trust Architecture",
-    description: "Designed and delivered Zero Trust microsegmentation architectures for 60+ LATAM enterprises across banking, telecom, and government — from architecture design through phased rollout and full handover documentation.",
+    description: "Designed and delivered Zero Trust microsegmentation architectures for LATAM enterprises across banking, telecom, and government — from architecture design through phased rollout and full handover documentation.",
   },
   {
     icon: Network,
     title: "Network Security",
-    description: "Firewall policy, VPN architecture, and threat detection with Cisco Secure Workload, Secure Network Analytics, Umbrella, Secure Access, and ISE across 6 countries.",
+    description: "Firewall policy, VPN architecture, and threat detection with Cisco Secure Workload, Secure Network Analytics, Umbrella, Secure Access, and ISE.",
   },
   {
     icon: BrainCircuit,
@@ -273,7 +273,7 @@ export default function About() {
                 rel="noopener noreferrer"
                 className="group flex flex-col items-center gap-2 p-4 rounded-lg bg-card-bg border border-card-border hover:border-neon-blue/40 hover:shadow-[0_0_16px_rgba(0,212,255,0.1)] transition-all duration-300"
               >
-                <img
+                <Image
                   src={cert.badge}
                   alt={cert.name}
                   width={80}
@@ -282,6 +282,9 @@ export default function About() {
                 />
                 <span className="text-xs font-mono text-gray-400 text-center leading-tight group-hover:text-neon-blue transition-colors">
                   {cert.name}
+                </span>
+                <span className="text-[10px] font-mono text-gray-600 group-hover:text-gray-500 transition-colors">
+                  Verified on Credly
                 </span>
               </a>
             ))}
@@ -296,7 +299,7 @@ export default function About() {
             <Languages className="w-5 h-5 text-neon-green" />
             <h3 className="text-xl font-bold text-foreground">Languages & Citizenship</h3>
           </div>
-          <div className="flex flex-wrap gap-4">
+          <div className="flex flex-wrap justify-center gap-4">
             <div className="px-5 py-3 rounded-lg bg-card-bg border border-neon-green/20 hover:border-neon-green/50 hover:shadow-[0_0_12px_rgba(0,255,136,0.15)] transition-all duration-300">
               <span className="text-sm font-mono text-neon-green">English</span>
               <span className="text-xs text-gray-500 ml-2">B2 High-Mid &middot; EF SET</span>

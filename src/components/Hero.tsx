@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import Image from "next/image";
 import { ChevronDown, Shield, Terminal } from "lucide-react";
 import ParticleNetwork from "./ParticleNetwork";
 
@@ -38,8 +39,10 @@ export default function Hero() {
       if (displayed.length > 0) {
         timeout = setTimeout(() => setDisplayed(displayed.slice(0, -1)), 30);
       } else {
-        setDeleting(false);
-        setTitleIndex((prev) => (prev + 1) % titles.length);
+        timeout = setTimeout(() => {
+          setDeleting(false);
+          setTitleIndex((prev) => (prev + 1) % titles.length);
+        }, 30);
       }
     }
 
@@ -57,9 +60,12 @@ export default function Hero() {
       <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-neon-blue/5 rounded-full blur-[120px]" />
 
       <div className="relative z-10 max-w-4xl mx-auto px-4 text-center">
-        <img
+        <Image
           src="/logo-fhs.png"
           alt="FHS Logo"
+          width={320}
+          height={320}
+          priority
           className="w-64 sm:w-80 mx-auto mb-6 drop-shadow-[0_0_20px_rgba(0,212,255,0.3)]"
         />
 
