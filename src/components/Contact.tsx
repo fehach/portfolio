@@ -65,11 +65,11 @@ export default function Contact() {
               &mdash; I&apos;m available for project-based work.
             </p>
             <a
-              href="mailto:ccie57676@gmail.com"
+              href="mailto:ccie57675@gmail.com"
               className="inline-flex items-center gap-2 text-sm font-mono text-neon-green hover:text-neon-green/80 transition-colors"
             >
               <Mail className="w-4 h-4" />
-              ccie57676@gmail.com
+              ccie57675@gmail.com
             </a>
           </div>
         </div>
