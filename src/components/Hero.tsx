@@ -15,7 +15,6 @@ const titles = [
 
 const impactStats = [
   { value: "60+", label: "Enterprise Deployments", color: "text-neon-blue" },
-  { value: "6", label: "Countries across the Americas", color: "text-neon-green" },
   { value: "16", label: "Years in Cybersecurity", color: "text-neon-purple" },
   { value: "2\u00D7", label: "CCIE \u00B7 Security + R&S", color: "text-white" },
 ];
@@ -97,7 +96,7 @@ export default function Hero() {
           engagements.
         </p>
 
-        <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 max-w-2xl mx-auto mb-12">
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 max-w-xl mx-auto mb-12">
           {impactStats.map((stat) => (
             <div
               key={stat.label}
