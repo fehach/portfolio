@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import { Analytics } from "@vercel/analytics/next";
 import "./globals.css";
 
 const siteUrl =
@@ -50,6 +51,28 @@ export const metadata: Metadata = {
   },
 };
 
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  name: "Federico Hach",
+  jobTitle: "Zero Trust & Cybersecurity Architect",
+  description:
+    "Senior cybersecurity architect with 60+ enterprise deployments across LATAM. CCIE Security #57675 · CISSP · MBA.",
+  url: siteUrl,
+  sameAs: [
+    "https://www.linkedin.com/in/federico-miguel-hach-saval-1458a114/",
+  ],
+  knowsAbout: [
+    "Zero Trust Architecture",
+    "Microsegmentation",
+    "PCI-DSS",
+    "Cisco Secure Workload",
+    "CISSP",
+    "Security Automation",
+    "AI Security",
+  ],
+};
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -60,8 +83,15 @@ export default function RootLayout({
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
+      </head>
       <body className="min-h-full flex flex-col bg-background text-foreground">
         {children}
+        <Analytics />
       </body>
     </html>
   );
