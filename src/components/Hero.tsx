@@ -71,7 +71,7 @@ export default function Hero() {
         <div className="inline-flex items-center gap-2 px-4 py-2 mb-8 rounded-full border border-neon-green/20 bg-neon-green/5">
           <Shield className="w-4 h-4 text-neon-green" />
           <span className="text-xs font-mono text-neon-green tracking-wider uppercase">
-            CCIE Security #57675 &middot; CISSP &middot; MBA
+            2&times;CCIE (SEC&middot;EI) &middot; CISSP &middot; MBA
           </span>
         </div>
 
