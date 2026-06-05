@@ -23,6 +23,12 @@ export default function Navbar() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
+  useEffect(() => {
+    const onKey = (e: KeyboardEvent) => { if (e.key === "Escape") setIsOpen(false); };
+    document.addEventListener("keydown", onKey);
+    return () => document.removeEventListener("keydown", onKey);
+  }, []);
+
   return (
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
@@ -69,6 +75,14 @@ export default function Navbar() {
           </button>
         </div>
       </div>
+
+      {isOpen && (
+        <div
+          className="fixed inset-0 z-[-1]"
+          aria-hidden="true"
+          onClick={() => setIsOpen(false)}
+        />
+      )}
 
       {isOpen && (
         <div className="md:hidden bg-[#0a0e17]/95 backdrop-blur-md border-b border-card-border">

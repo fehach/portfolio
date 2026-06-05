@@ -21,6 +21,8 @@ export default function ParticleNetwork() {
     const ctx = canvas.getContext("2d");
     if (!ctx) return;
 
+    const prefersReduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
     let animationId: number;
     let particles: Particle[] = [];
 
@@ -42,12 +44,24 @@ export default function ParticleNetwork() {
       }));
     };
 
+    const drawStatic = () => {
+      const w = canvas.offsetWidth;
+      const h = canvas.offsetHeight;
+      ctx.clearRect(0, 0, w, h);
+      for (const p of particles) {
+        ctx.beginPath();
+        ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
+        const rgb = p.color === "green" ? "0, 255, 136" : "0, 212, 255";
+        ctx.fillStyle = `rgba(${rgb}, 0.3)`;
+        ctx.fill();
+      }
+    };
+
     const draw = () => {
       const w = canvas.offsetWidth;
       const h = canvas.offsetHeight;
       ctx.clearRect(0, 0, w, h);
 
-      // Update positions
       for (const p of particles) {
         p.x += p.vx;
         p.y += p.vy;
@@ -55,7 +69,6 @@ export default function ParticleNetwork() {
         if (p.y < 0 || p.y > h) p.vy *= -1;
       }
 
-      // Draw connections
       const maxDist = 120;
       for (let i = 0; i < particles.length; i++) {
         for (let j = i + 1; j < particles.length; j++) {
@@ -77,7 +90,6 @@ export default function ParticleNetwork() {
         }
       }
 
-      // Draw particles
       for (const p of particles) {
         ctx.beginPath();
         ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
@@ -85,7 +97,6 @@ export default function ParticleNetwork() {
         ctx.fillStyle = `rgba(${rgb}, 0.3)`;
         ctx.fill();
 
-        // Glow effect on larger particles
         if (p.radius > 1.2) {
           ctx.beginPath();
           ctx.arc(p.x, p.y, p.radius * 3, 0, Math.PI * 2);
@@ -99,11 +110,17 @@ export default function ParticleNetwork() {
 
     resize();
     createParticles();
-    draw();
+
+    if (prefersReduced) {
+      drawStatic();
+    } else {
+      draw();
+    }
 
     const handleResize = () => {
       resize();
       createParticles();
+      if (prefersReduced) drawStatic();
     };
 
     window.addEventListener("resize", handleResize);
@@ -117,6 +134,7 @@ export default function ParticleNetwork() {
   return (
     <canvas
       ref={canvasRef}
+      aria-hidden="true"
       className="absolute inset-0 w-full h-full pointer-events-none"
       style={{ opacity: 0.6 }}
     />
