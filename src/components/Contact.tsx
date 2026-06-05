@@ -183,8 +183,11 @@ export default function Contact() {
           <h2 className="text-3xl sm:text-4xl font-bold mb-3">
             Let&apos;s <span className="text-neon-purple">Talk</span>
           </h2>
-          <p className="text-gray-400 text-sm max-w-md mx-auto">
+          <p className="text-gray-400 text-sm max-w-md mx-auto mb-2">
             Open to senior architect roles and consulting engagements.
+          </p>
+          <p className="text-xs text-gray-500 font-mono">
+            Based in Mexico City &middot; Available across Latin America and remote globally
           </p>
         </div>
 
@@ -229,9 +232,6 @@ export default function Contact() {
         </div>
 
         <div className="text-center">
-          <p className="text-xs text-gray-500 font-mono mb-4">
-            Based in Mexico City &middot; Available across Latin America and remote globally
-          </p>
           <div className="flex flex-wrap justify-center gap-2">
             {[
               "Senior Security Architect roles",
