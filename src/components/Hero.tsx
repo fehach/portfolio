@@ -92,8 +92,11 @@ export default function Hero() {
           Cybersecurity architect and automation builder. I design Zero Trust
           programs that actually get deployed &mdash; 60+ enterprise customers
           across banking, telecom, and government in Latin America. Dual CCIE.
-          CISSP. MBA. Available for senior architect roles and consulting
-          engagements.
+          CISSP. MBA.{" "}
+          <br className="hidden sm:block" />
+          <span className="text-neon-green font-semibold">
+            Available for senior architect roles and consulting engagements.
+          </span>
         </p>
 
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 max-w-xl mx-auto mb-12">
