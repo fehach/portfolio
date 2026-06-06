@@ -96,7 +96,7 @@ export default function Hero() {
           <br />
           <br />
           <span className="text-neon-green font-semibold">
-            Available for senior architect roles and consulting engagements.
+            Open to work in Mexico City and remote globally.
           </span>
         </p>
 
