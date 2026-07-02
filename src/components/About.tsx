@@ -112,7 +112,9 @@ const ciscoExperience = [
     summary:
       "Lead Security Architect for enterprise customers across the Americas, responsible for security solution design, delivery, and post-deployment optimization across Cisco\u2019s security portfolio. Drive Zero Trust, Secure Access, microsegmentation, network visibility, and AI automation initiatives within the Security Consulting team.",
     bullets: [
-      "Led AI adoption within the Security Consulting team by building Python + Claude AI automation tools \u2014 transforming document processing from hours of manual work into results achieved in seconds, recognized by Cisco CX leadership for measurable productivity impact.",
+      "Drove AI adoption strategy for the Security Consulting practice \u2014 ideating use cases from concept through production and building Python + Claude AI automation tools that transformed document processing from hours of manual work into seconds, recognized by Cisco CX leadership for measurable productivity impact.",
+      "Mentored security engineers across the CX Security team on Secure Workload delivery methodology, raising team-wide delivery consistency.",
+      "Developed and shared internal AI tooling and enablement sessions, recognized by leadership for \u201cempowering others to learn.\u201d",
       "Designed Zero Trust segmentation controls aligned to NIST SP 800-207 and PCI-DSS network segmentation requirements, implemented via Cisco Secure Workload \u2014 enabling 4 banks across LATAM to achieve compliance without disrupting live payment infrastructure.",
       "Supported early customer adoption of Cisco Secure Access, including migration scenarios from Cisco Umbrella to Secure Access \u2014 reducing transition risk through phased rollout and validation.",
       "Delivered architecture guidance, validation, and optimization for environments involving Secure Workload, Secure Network Analytics, Secure Access, ISE, NGFW, and Umbrella across multiple enterprise accounts.",
@@ -127,11 +129,11 @@ const ciscoExperience = [
     summary:
       "Delivered end-to-end Cisco Security projects across the Americas, managing the full lifecycle from architecture design and implementation to documentation, validation, and operational handover. 60+ enterprise deployments across 6 countries.",
     bullets: [
-      "Delivered 60+ enterprise security solution deployments across Canada, United States, Mexico, Brazil, Chile, and Argentina \u2014 spanning banking, telecom, government, and insurance verticals.",
+      "Led change management for high-stakes engagements, coordinating customer teams, Cisco TAC, and Business Unit escalations \u2014 building lab environments to validate edge cases and reduce deployment risk.",
+      "Owned end-to-end delivery accountability across 60+ engagements: scoping, design authority, validation, and operational handover \u2014 spanning banking, telecom, government, and insurance verticals across Canada, United States, Mexico, Brazil, Chile, and Argentina.",
       "Created High Level Design, Low Level Design, and Test Plan documentation for complex security engagements, which ended up being used as reference templates across the CX Security team.",
       "Delivered PCI-DSS scope reduction, segmentation control design, and QSA evidence packaging for banking customers \u2014 implementing microsegmentation policies via Cisco Secure Workload across multi-site enterprise environments.",
       "Delivered Cisco Secure Network Analytics projects end-to-end: flow collection, host group hierarchy design, custom security events, and response management integration \u2014 giving SOC teams real-time visibility they previously lacked.",
-      "Served as Change Management lead for complex engagements, building lab environments to validate edge cases and coordinate escalations with Cisco TAC and Business Unit teams \u2014 reducing deployment risk on high-stakes accounts.",
     ],
   },
 ];
