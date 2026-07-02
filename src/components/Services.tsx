@@ -6,15 +6,15 @@ const services = [
     icon: Shield,
     title: "Zero Trust & Microsegmentation Assessment",
     description:
-      "Assess application dependency maps, segmentation maturity, enforcement readiness, and rollout risk across enterprise environments.",
-    outcomes: ["Current-state assessment", "Phased roadmap", "Policy enforcement model"],
+      "Assess application dependency maps, segmentation maturity, enforcement readiness, and rollout risk against NIST SP 800-207 and Zero Trust maturity models.",
+    outcomes: ["NIST 800-207 alignment", "Phased roadmap", "Policy enforcement model"],
   },
   {
     icon: ClipboardCheck,
-    title: "PCI-DSS Segmentation Advisory",
+    title: "PCI-DSS & Compliance Advisory",
     description:
-      "Help payment environments reduce scope, validate segmentation controls, and prepare evidence packages for compliance reviews.",
-    outcomes: ["Scope reduction strategy", "QSA-ready evidence", "Control validation plan"],
+      "Help payment environments reduce PCI-DSS scope, validate segmentation controls, and prepare QSA-ready evidence — with control mapping to NIST CSF and ISO 27001 where needed.",
+    outcomes: ["Scope reduction strategy", "QSA-ready evidence", "Framework control mapping"],
   },
   {
     icon: Bot,

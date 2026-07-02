@@ -2,21 +2,27 @@ import FadeIn from "./FadeIn";
 
 const groups = [
   {
-    title: "Cisco Security",
-    color: "text-neon-blue",
-    border: "border-neon-blue/20",
-    technologies: ["Secure Workload", "Secure Access", "ISE", "Secure Network Analytics", "Umbrella", "NGFW / FMC"],
+    title: "Frameworks & Standards",
+    color: "text-neon-green",
+    border: "border-neon-green/20",
+    technologies: ["NIST SP 800-207 (Zero Trust)", "PCI-DSS", "NIST CSF", "MITRE ATT&CK", "ISO 27001", "CIS Controls"],
   },
   {
     title: "Architecture Domains",
-    color: "text-neon-green",
-    border: "border-neon-green/20",
-    technologies: ["Zero Trust", "Microsegmentation", "PCI-DSS", "Incident Response", "OT Visibility", "Network Security"],
+    color: "text-neon-blue",
+    border: "border-neon-blue/20",
+    technologies: ["Zero Trust", "Microsegmentation", "Compliance & Audit Readiness", "Incident Response", "OT Visibility", "Network Security"],
+  },
+  {
+    title: "Cisco Security",
+    color: "text-neon-purple",
+    border: "border-neon-purple/20",
+    technologies: ["Secure Workload", "Secure Access", "ISE", "Secure Network Analytics", "Umbrella", "NGFW / FMC"],
   },
   {
     title: "Automation Stack",
-    color: "text-neon-purple",
-    border: "border-neon-purple/20",
+    color: "text-neon-blue",
+    border: "border-neon-blue/20",
     technologies: ["Python", "Claude AI", "REST APIs", "Dashboards", "CSV Reporting", "Next.js"],
   },
 ];
@@ -39,7 +45,7 @@ export default function TechStack() {
           </h2>
         </FadeIn>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6">
           {groups.map((group, i) => (
             <FadeIn key={group.title} delay={0.08 * i}>
               <div className={`p-6 rounded-xl bg-card-bg border ${group.border} h-full`}>

@@ -25,6 +25,10 @@ export const metadata: Metadata = {
   keywords: [
     "Security Architect",
     "Zero Trust",
+    "NIST SP 800-207",
+    "NIST CSF",
+    "ISO 27001",
+    "MITRE ATT&CK",
     "Cisco Secure Workload",
     "Microsegmentation",
     "PCI-DSS",
@@ -64,6 +68,10 @@ const jsonLd = {
   ],
   knowsAbout: [
     "Zero Trust Architecture",
+    "NIST SP 800-207",
+    "NIST Cybersecurity Framework",
+    "ISO 27001",
+    "MITRE ATT&CK",
     "Microsegmentation",
     "PCI-DSS",
     "Cisco Secure Workload",

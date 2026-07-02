@@ -19,7 +19,7 @@ const skills = [
   {
     icon: ShieldCheck,
     title: "Zero Trust Architecture",
-    description: "Designed and delivered Zero Trust microsegmentation architectures for LATAM enterprises across banking, telecom, and government — from architecture design through phased rollout and full handover documentation.",
+    description: "Designed and delivered Zero Trust microsegmentation architectures aligned to NIST SP 800-207 for LATAM enterprises across banking, telecom, and government — from architecture design through phased rollout and full handover documentation.",
   },
   {
     icon: Network,
@@ -38,8 +38,8 @@ const skills = [
   },
   {
     icon: Landmark,
-    title: "PCI-DSS Compliance",
-    description: "Led PCI-DSS scoping, segmentation design, and compliance delivery for 4 payment-processing environments in LATAM banking using Cisco Secure Workload and Secure Network Analytics.",
+    title: "Compliance & Frameworks",
+    description: "Led PCI-DSS scoping, segmentation design, and QSA-ready evidence delivery for 4 payment-processing environments in LATAM banking. Working fluency across NIST CSF, ISO 27001, MITRE ATT&CK, and CIS Controls.",
   },
 ];
 
@@ -113,7 +113,7 @@ const ciscoExperience = [
       "Lead Security Architect for enterprise customers across the Americas, responsible for security solution design, delivery, and post-deployment optimization across Cisco\u2019s security portfolio. Drive Zero Trust, Secure Access, microsegmentation, network visibility, and AI automation initiatives within the Security Consulting team.",
     bullets: [
       "Led AI adoption within the Security Consulting team by building Python + Claude AI automation tools \u2014 transforming document processing from hours of manual work into results achieved in seconds, recognized by Cisco CX leadership for measurable productivity impact.",
-      "Designed and deployed Zero Trust microsegmentation architectures using Cisco Secure Workload for enterprise banking customers across LATAM \u2014 enabling 4 banks to achieve PCI-DSS compliance without disrupting live payment infrastructure.",
+      "Designed Zero Trust segmentation controls aligned to NIST SP 800-207 and PCI-DSS network segmentation requirements, implemented via Cisco Secure Workload \u2014 enabling 4 banks across LATAM to achieve compliance without disrupting live payment infrastructure.",
       "Supported early customer adoption of Cisco Secure Access, including migration scenarios from Cisco Umbrella to Secure Access \u2014 reducing transition risk through phased rollout and validation.",
       "Delivered architecture guidance, validation, and optimization for environments involving Secure Workload, Secure Network Analytics, Secure Access, ISE, NGFW, and Umbrella across multiple enterprise accounts.",
       "Built an AI-powered security query agent (CSW OpenAPI Agent) that cut recurring SOC analyst query time from hours to under 5 minutes per investigation \u2014 eliminating manual CLI-diving for threat lookups.",
@@ -129,7 +129,7 @@ const ciscoExperience = [
     bullets: [
       "Delivered 60+ enterprise security solution deployments across Canada, United States, Mexico, Brazil, Chile, and Argentina \u2014 spanning banking, telecom, government, and insurance verticals.",
       "Created High Level Design, Low Level Design, and Test Plan documentation for complex security engagements, which ended up being used as reference templates across the CX Security team.",
-      "Implemented Cisco Secure Workload microsegmentation policies across multi-site enterprise environments \u2014 including PCI-DSS scoping and QSA evidence packaging for banking customers.",
+      "Delivered PCI-DSS scope reduction, segmentation control design, and QSA evidence packaging for banking customers \u2014 implementing microsegmentation policies via Cisco Secure Workload across multi-site enterprise environments.",
       "Delivered Cisco Secure Network Analytics projects end-to-end: flow collection, host group hierarchy design, custom security events, and response management integration \u2014 giving SOC teams real-time visibility they previously lacked.",
       "Served as Change Management lead for complex engagements, building lab environments to validate edge cases and coordinate escalations with Cisco TAC and Business Unit teams \u2014 reducing deployment risk on high-stakes accounts.",
     ],
