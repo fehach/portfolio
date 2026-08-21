@@ -54,7 +54,7 @@ const recognitions = [
   },
 ];
 
-const certifications = [
+const certifications: { name: string; badge?: string }[] = [
   {
     name: "CCIE Security",
     badge: "https://images.credly.com/images/726a322c-efb3-42d7-b87e-8ce8a587ec57/cisco_ccie_security.png",
@@ -74,6 +74,18 @@ const certifications = [
   {
     name: "AI Technical Practitioner",
     badge: "https://images.credly.com/images/ef187a35-68d1-48ea-85f2-0ac1fbdd0b5f/blob",
+  },
+  {
+    name: "Google AI Professional",
+  },
+  {
+    name: "Upskill 2024: Multicloud",
+  },
+  {
+    name: "Fortinet NSE 1",
+  },
+  {
+    name: "Fortinet NSE 2",
   },
   {
     name: "Secure Cloud Access",
@@ -275,13 +287,19 @@ export default function About() {
                 rel="noopener noreferrer"
                 className="group flex flex-col items-center gap-2 p-4 rounded-lg bg-card-bg border border-card-border hover:border-neon-blue/40 hover:shadow-[0_0_16px_rgba(0,212,255,0.1)] transition-all duration-300"
               >
-                <Image
-                  src={cert.badge}
-                  alt={cert.name}
-                  width={80}
-                  height={80}
-                  className="group-hover:scale-110 transition-transform duration-300"
-                />
+                {cert.badge ? (
+                  <Image
+                    src={cert.badge}
+                    alt={cert.name}
+                    width={80}
+                    height={80}
+                    className="group-hover:scale-110 transition-transform duration-300"
+                  />
+                ) : (
+                  <span className="flex items-center justify-center w-20 h-20 rounded-full border border-neon-blue/30 bg-neon-blue/5 group-hover:scale-110 transition-transform duration-300">
+                    <Award className="w-10 h-10 text-neon-blue/70" />
+                  </span>
+                )}
                 <span className="text-xs font-mono text-gray-400 text-center leading-tight group-hover:text-neon-blue transition-colors">
                   {cert.name}
                 </span>
