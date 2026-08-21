@@ -77,6 +77,7 @@ const certifications: { name: string; badge?: string }[] = [
   },
   {
     name: "Google AI Professional",
+    badge: "https://images.credly.com/images/5bd2d506-c95c-4766-a5b1-8da62a3a23b2/blob",
   },
   {
     name: "Upskill 2024: Multicloud",
