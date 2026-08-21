@@ -92,6 +92,9 @@ const certifications: { name: string; badge?: string }[] = [
     badge: "https://images.credly.com/size/680x680/images/a30952f3-f354-4233-b02a-690ffe95d190/blob",
   },
   {
+    name: "Fortinet NSE 3",
+  },
+  {
     name: "Secure Cloud Access",
     badge: "https://images.credly.com/images/b873bef6-d866-4464-8e33-6c5b051513dd/blob",
   },
