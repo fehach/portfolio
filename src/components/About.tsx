@@ -81,12 +81,15 @@ const certifications: { name: string; badge?: string }[] = [
   },
   {
     name: "Upskill 2024: Multicloud",
+    badge: "https://images.credly.com/size/680x680/images/b544b53a-f280-400f-a7e2-a77ad949263a/image.png",
   },
   {
     name: "Fortinet NSE 1",
+    badge: "https://images.credly.com/size/680x680/images/0dc7965b-8507-4312-9c12-1add6c50fa49/blob",
   },
   {
     name: "Fortinet NSE 2",
+    badge: "https://images.credly.com/size/680x680/images/a30952f3-f354-4233-b02a-690ffe95d190/blob",
   },
   {
     name: "Secure Cloud Access",
